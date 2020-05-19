@@ -1,0 +1,62 @@
+body {
+    background-color: green;
+}
+.panel {
+    position: fixed;
+    height: 100%;
+    width: 160px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: lightpink;
+    overflow-x: hidden;
+    padding-top: 90px;
+}
+.mainDoc {
+    margin-left: 160px;
+    // padding-top: 90px;
+}
+.full-height {
+    height: 100vh;
+}
+section, h2 {
+    position: relative;
+    // top: 20px;
+}
+h2 {
+    padding-top: 85px;
+    // height: 40px;
+    background-color: lightgreen;
+}
+.nav {
+    display: block;
+    position: fixed;
+    background-color: lightcoral;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    a { display: inline-block; }
+}
+
+// Search box
+
+
+// code box
+
+pre {
+    overflow: auto;
+    margin: 2rem;
+}
+code {
+    background: #fff;
+    font-family: monospace, monospace;
+    font-size: 1em;
+    padding: 2.5rem 3rem;
+    display: block;
+    color: #222;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+
+    white-space: pre;
+    word-wrap: break-word;
+}

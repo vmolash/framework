@@ -18,12 +18,23 @@ body {
 
 .panel {
   position: fixed;
+<<<<<<< HEAD
   width: 100%;
+=======
+
+  width: 100%;
+
+
+>>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38
   z-index: 1;
   top: 0;
   left: 0;
   background-color: lightpink;
   overflow-x: hidden;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38
   padding-top: 50px;
 }
 
@@ -49,6 +60,16 @@ body {
   .mainDoc {
     margin-left: 160px;
   }
+<<<<<<< HEAD
+=======
+
+  padding-top: 90px;
+}
+
+.mainDoc {
+  margin-left: 160px;
+
+>>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38
 }
 
 .full-height {
@@ -60,6 +81,10 @@ section, h2 {
 }
 
 h2 {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38
   padding-top: 135px;
   background-color: lightgreen;
 }
@@ -71,6 +96,16 @@ h2 {
 }
 
 header {
+<<<<<<< HEAD
+=======
+
+  padding-top: 85px;
+  background-color: lightgreen;
+}
+
+.nav {
+
+>>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38
   display: block;
   position: fixed;
   background-color: lightcoral;
@@ -79,12 +114,24 @@ header {
   width: 100%;
 }
 
+<<<<<<< HEAD
 header a {
+=======
+
+header a {
+
+.nav a {
+
+>>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38
   display: inline-block;
 }
 
 pre {
   overflow: auto;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38
 }
 
 code {
@@ -281,4 +328,22 @@ header nav ul li a {
 .show {
   height: 100%;
   overflow: hidden;
+<<<<<<< HEAD
+=======
+
+  margin: 2rem;
+}
+
+code {
+  background: #fff;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  padding: 2.5rem 3rem;
+  display: block;
+  color: #222;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  white-space: pre;
+  word-wrap: break-word;
+>>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38
 }

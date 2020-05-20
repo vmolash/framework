@@ -24,7 +24,6 @@ header {
         right: 8px;
         @include break(500px) { display: none; }
     }
-    
     nav {
         height: 0;
         overflow: hidden;

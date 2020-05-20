@@ -1,0 +1,28 @@
+@mixin break($args...) {
+    @if length($args) == 1 {
+      @media (min-width: nth($args, 1)) {
+        @content;
+      }
+    } @else {
+      @media (min-width: nth($args, 1)) and 
+              (max-width: nth($args, 2)) {
+                @content;
+              }
+    } 
+  }
+  @mixin linx ($link, $hover, $active) { // custom mixin
+    a {
+      color: $link;
+      &:hover {
+        color: $hover;   
+      }
+      &:active {
+        color: $active;
+      }
+    }
+  }
+  @mixin browsers {
+    -webkit-user-select: none; /*Chrome all / Safari all */
+    -moz-user-select: none; /*Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+  }

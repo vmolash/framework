@@ -18,18 +18,37 @@ body {
 
 .panel {
   position: fixed;
-  height: 100%;
-  width: 160px;
+  width: 100%;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: lightpink;
   overflow-x: hidden;
-  padding-top: 90px;
+  padding-top: 50px;
+}
+
+@media (min-width: 580px) {
+  .panel {
+    top: 0;
+    height: 100%;
+    width: 160px;
+  }
+}
+
+@media (min-width: 580px) {
+  .panel {
+    padding-top: 90px;
+  }
 }
 
 .mainDoc {
-  margin-left: 160px;
+  margin-left: 0;
+}
+
+@media (min-width: 580px) {
+  .mainDoc {
+    margin-left: 160px;
+  }
 }
 
 .full-height {
@@ -41,11 +60,17 @@ section, h2 {
 }
 
 h2 {
-  padding-top: 85px;
+  padding-top: 135px;
   background-color: lightgreen;
 }
 
-.nav {
+@media (min-width: 580px) {
+  h2 {
+    padding-top: 85px;
+  }
+}
+
+header {
   display: block;
   position: fixed;
   background-color: lightcoral;
@@ -54,24 +79,206 @@ h2 {
   width: 100%;
 }
 
-.nav a {
+header a {
   display: inline-block;
 }
 
 pre {
   overflow: auto;
-  margin: 2rem;
 }
 
 code {
-  background: #fff;
-  font-family: monospace, monospace;
   font-size: 1em;
-  padding: 2.5rem 3rem;
   display: block;
   color: #222;
-  border: 1px solid #E1E1E1;
-  border-radius: 4px;
   white-space: pre;
   word-wrap: break-word;
+}
+
+figure {
+  margin: 2rem;
+  background-color: #dedede;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+header {
+  background-color: #444;
+}
+
+header input[type=checkbox] {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+}
+
+header input[type=checkbox]:checked ~ nav {
+  height: auto;
+  overflow: hidden;
+}
+
+header label {
+  display: block;
+  background: url(../images/hamburger-menu.png) no-repeat right center;
+  text-indent: -999em;
+  height: 44px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /*Chrome all / Safari all */
+  -moz-user-select: none;
+  /*Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  position: relative;
+  top: 2px;
+  right: 8px;
+}
+
+@media (min-width: 500px) {
+  header label {
+    display: none;
+  }
+}
+
+header nav {
+  height: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 500px) {
+  header nav {
+    height: 100%;
+    overflow: visible;
+  }
+}
+
+@media (min-width: 0) and (max-width: 630px) {
+  header nav ul .logo {
+    display: none;
+  }
+}
+
+header nav ul li {
+  border-radius: 5px;
+}
+
+header nav ul li a {
+  color: #fff;
+}
+
+header nav ul li a:hover {
+  color: #93d293;
+}
+
+header nav ul li a:active {
+  color: #93d293;
+}
+
+header nav ul li:hover:first-of-type {
+  background-color: transparent;
+}
+
+header nav ul li a {
+  font-weight: bold;
+  display: block;
+  padding: 12px 10px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 500px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+  }
+  header nav ul li:first-of-type {
+    margin-right: auto;
+  }
+  header nav ul li a {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 56px;
+  }
+  header nav ul li a.logo {
+    padding: 0;
+  }
+}
+
+.panel div {
+  position: relative;
+}
+
+.panel div h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  width: 80%;
+  z-index: 3;
+}
+
+@media (min-width: 580px) {
+  .panel div h3 {
+    display: none;
+  }
+}
+
+.panel input[type=checkbox] {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+}
+
+.panel input[type=checkbox]:checked ~ nav {
+  height: auto;
+  overflow: hidden;
+}
+
+.panel label {
+  display: block;
+  background: url(../images/hamburger-menu.png) no-repeat right center;
+  text-indent: -999em;
+  height: 44px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  /*Chrome all / Safari all */
+  -moz-user-select: none;
+  /*Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  position: relative;
+  top: 2px;
+  right: 8px;
+}
+
+@media (min-width: 580px) {
+  .panel label {
+    display: none;
+  }
+}
+
+.panel nav {
+  height: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 580px) {
+  .panel nav {
+    height: 100%;
+    overflow: visible;
+  }
+}
+
+.active {
+  color: #93d293;
+  transition: all 0.7s ease-in-out;
+}
+
+.show {
+  height: 100%;
+  overflow: hidden;
 }

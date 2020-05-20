@@ -18,12 +18,16 @@ body {
 
 .panel {
   position: fixed;
+
   width: 100%;
+
+
   z-index: 1;
   top: 0;
   left: 0;
   background-color: lightpink;
   overflow-x: hidden;
+
   padding-top: 50px;
 }
 
@@ -49,6 +53,13 @@ body {
   .mainDoc {
     margin-left: 160px;
   }
+
+  padding-top: 90px;
+}
+
+.mainDoc {
+  margin-left: 160px;
+
 }
 
 .full-height {
@@ -60,6 +71,7 @@ section, h2 {
 }
 
 h2 {
+
   padding-top: 135px;
   background-color: lightgreen;
 }
@@ -71,6 +83,13 @@ h2 {
 }
 
 header {
+
+  padding-top: 85px;
+  background-color: lightgreen;
+}
+
+.nav {
+
   display: block;
   position: fixed;
   background-color: lightcoral;
@@ -79,12 +98,17 @@ header {
   width: 100%;
 }
 
+
 header a {
+
+.nav a {
+
   display: inline-block;
 }
 
 pre {
   overflow: auto;
+
 }
 
 code {
@@ -281,4 +305,19 @@ header nav ul li a {
 .show {
   height: 100%;
   overflow: hidden;
+
+  margin: 2rem;
+}
+
+code {
+  background: #fff;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  padding: 2.5rem 3rem;
+  display: block;
+  color: #222;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  white-space: pre;
+  word-wrap: break-word;
 }

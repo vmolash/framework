@@ -3,17 +3,20 @@ body {
 }
 .panel {
     position: fixed;
+
     width: 100%;
     @include break(580px) {
         top: 0;
         height: 100%;
         width: 160px;
     }
+
     z-index: 1;
     top: 0;
     left: 0;
     background-color: lightpink;
     overflow-x: hidden;
+
     padding-top: 50px;
     @include break(580px) { padding-top: 90px; }
 }
@@ -22,6 +25,7 @@ body {
         margin-left: 160px;
     }
     margin-left: 0;
+
     // padding-top: 90px;
 }
 .full-height {
@@ -32,6 +36,7 @@ section, h2 {
     // top: 20px;
 }
 h2 {
+
     padding-top: 135px;
     @include break(580px) {
         padding-top: 85px;
@@ -40,6 +45,7 @@ h2 {
     background-color: lightgreen;
 }
 header {
+
     display: block;
     position: fixed;
     background-color: lightcoral;

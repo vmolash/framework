@@ -13,6 +13,7 @@ function myFunction() {
             li[i].style.display = "none";
         }
     }
+
 }
 
 // Active link sets to green color when click on it
@@ -40,3 +41,4 @@ function myFunction() {
 //     this.classList.toggle('show');
 //   });
 // }
+

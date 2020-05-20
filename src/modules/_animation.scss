@@ -1,0 +1,8 @@
+.active { // header active link with js
+    color:  $heading-color;
+    transition: all 0.7s ease-in-out;
+}
+.show { // Mobile navigation menu with js
+    height: 100%;
+    overflow: hidden;
+}

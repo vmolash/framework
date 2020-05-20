@@ -8,52 +8,76 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css">
 </head>
 <body>
+
+        <header>
+                <div class="container">
+                    <input type="checkbox" id="toggle">
+                    <label for="toggle">Menu</label>
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="#" class="logo"><img src="../images/logo.png" alt=""></a></li>
+                            <li><a href="../index.html" class="nav-item">Home</a></li>
+                            <li><a href="#" class="nav-item active">Docs</a></li>
+                            <li><a href="download.html" class="nav-item">Download</a></li>
+                            <li><a href="demo.html" class="nav-item">Demo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
     <div class="wrapper">
-        <div class="nav">
+        <!-- <div class="nav">
             <ul>
                 <li><a href="#">Docs</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Download</a></li>
             </ul>
-        </div>
+
+        </div> -->
         <div class="panel">
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-                <ul id="myUL">
-                    <li><a href="#doc1">Fonts</a></li>
-                    <li><a href="#doc2">Typography</a></li>
-                    <li><a href="#doc3">Table</a></li>
-                    <li><a href="#doc4">Buttons</a></li>
-                </ul>
+            <div>
+                <h3>Documentation</h3>
+                <input type="checkbox" id="togglePanel">
+                <label for="togglePanel">Menu</label>
+
+                <nav>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                    <ul id="myUL">
+                        <li><a href="#doc1">Fonts</a></li>
+                        <li><a href="#doc2">Typography</a></li>
+                        <li><a href="#doc3">Table</a></li>
+                        <li><a href="#doc4">Buttons</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <div class="mainDoc">
             <section >
                 <h2 id="doc1">Heading Doc-1</h2>
-                
-                <pre>
-                    <code>
-                        <div class="container">
 
-                          <div class="row">
-                            <div class="one-half column">1/2</div>
-                            <div class="one-half column">1/2</div>
-                          </div>
-                        
-                        </div>
-                    </code>
-                </pre>
-                <pre>
-                    <code>
-                        <h4>Ghlsj</h4>
-                    <p>sdfsd</p>
-                    </code>
-                </pre>
-                
+
+
                 <p>Odio cupiditate officiis totam suscipit assumenda exercitationem accusamus odit eligendi, libero labore provident impedit dolores ex eveniet sequi eos similique, atque esse cum eaque placeat fugit. Dolorem rerum rem asperiores?</p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, necessitatibus architecto libero provident fugiat distinctio laboriosam aut animi, nemo, amet et ipsa voluptas quam voluptatibus laborum delectus quisquam suscipit asperiores.</p>
                 <p>Aliquid at optio odit libero nemo, placeat consequuntur dolorum accusamus illo corporis, eligendi sequi labore eaque quidem animi totam deserunt modi nam quam possimus iusto ad. Maiores nemo suscipit nam!</p>
                 <p>Repudiandae maxime doloremque sunt? Porro, numquam accusantium quos voluptas provident explicabo sit omnis nemo perspiciatis adipisci dolore. Natus, repudiandae et iste, rerum cum voluptates est temporibus minima reiciendis non veniam.</p>
                 <p>Quia esse nulla impedit amet sunt odit incidunt eaque doloremque rem sit debitis ipsam necessitatibus assumenda ex culpa, ratione ad, maiores reiciendis? Voluptate repellendus fuga praesentium deleniti velit expedita rerum.</p>
                 <p>Ipsam similique in dolore, nemo, optio libero quos perferendis iusto, pariatur alias necessitatibus voluptatem inventore laboriosam. Quibusdam voluptas perferendis atque esse, qui quia repudiandae dolor debitis tempora maiores. Veritatis, facilis!</p>
+
+
+<figure>
+<pre>
+<code>
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
+    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+</figure>
+
             </section>
             <section >
                 <h2 id="doc2">Heading Doc-2</h2>

@@ -13,10 +13,6 @@ function myFunction() {
             li[i].style.display = "none";
         }
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38
 }
 
 // Active link sets to green color when click on it
@@ -43,9 +39,5 @@ function myFunction() {
 //   NAVIGAT.addEventListener('click', function() {
 //     this.classList.toggle('show');
 //   });
-<<<<<<< HEAD
-// }
-=======
 // }
 
->>>>>>> 749f4f2548f26d8b992283ba89dcb417d5053c38

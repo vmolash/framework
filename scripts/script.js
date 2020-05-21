@@ -1,10 +1,13 @@
+li = document.getElementsByClassName("panel-item");
+console.log(li);
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
+    console.log(input.value);
+    filter = input.value.toUpperCase().replace(/\s/g, '');
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
+    for (let i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
         txtValue = a.textContent || a.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -14,6 +17,42 @@ function myFunction() {
         }
     }
 }
+$(window).resize(function() {
+    search();
+});
+function search() {
+    if( $(window).width() <= 580 ) {
+        console.log($(this).width());
+        $('#myInput').keyup(function() {
+            $('.panel nav').addClass('activeSearch'); 
+            myFunction();
+        });
+        $('.panel nav').click(function() {
+            $('.panel nav').removeClass('activeSearch');
+            $('#myInput').val("");
+            for(let i=0; i<li.length; i++) {
+                li[i].style.display = "";
+            }
+        });
+    }
+    if( $(window).width() > 580) {
+        $('.panel nav').click(function() {
+            $('#myInput').val("");
+            for(let i=0; i<li.length; i++) {
+                li[i].style.display = "";
+            }
+        });
+    }
+}
+search();
+
+// $('#togglePanel').click
+
+// $(window).resize(function() {
+//     if( $(this).width() > 580 ) {
+
+//     }
+// });
 
 // Active link sets to green color when click on it
 // const NAVCONTAINER = document.querySelector('nav');

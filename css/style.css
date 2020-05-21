@@ -93,6 +93,27 @@ code {
   color: #222;
   white-space: pre;
   word-wrap: break-word;
+  max-height: 200px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+code ::-webkit-scrollbar {
+  width: 10px;
+}
+
+code ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+code ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+code ::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 figure {
@@ -199,7 +220,7 @@ header nav ul li a {
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 150px;
     height: 56px;
   }
   header nav ul li a.logo {
@@ -211,7 +232,7 @@ header nav ul li a {
   position: relative;
 }
 
-.panel div h3 {
+.panel div input {
   position: absolute;
   top: 0;
   left: 0;
@@ -221,8 +242,8 @@ header nav ul li a {
 }
 
 @media (min-width: 580px) {
-  .panel div h3 {
-    display: none;
+  .panel div input {
+    position: inherit;
   }
 }
 
@@ -239,7 +260,7 @@ header nav ul li a {
 
 .panel label {
   display: block;
-  background: url(../images/hamburger-menu.png) no-repeat right center;
+  background: url(../images/search.png) no-repeat right center;
   text-indent: -999em;
   height: 44px;
   cursor: pointer;
@@ -271,6 +292,10 @@ header nav ul li a {
     height: 100%;
     overflow: visible;
   }
+}
+
+.searchBox.activeSearch {
+  height: auto;
 }
 
 .active {

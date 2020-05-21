@@ -253,11 +253,6 @@ header nav ul li a {
   left: -999em;
 }
 
-.panel input[type=checkbox]:checked ~ nav {
-  height: auto;
-  overflow: hidden;
-}
-
 .panel label {
   display: block;
   background: url(../images/search.png) no-repeat right center;
@@ -296,6 +291,7 @@ header nav ul li a {
 
 .searchBox.activeSearch {
   height: auto;
+  overflow: hidden;
 }
 
 .active {

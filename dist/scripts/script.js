@@ -22,11 +22,14 @@ $(window).resize(function() {
 });
 function search() {
     if( $(window).width() <= 580 ) {
-        console.log($(this).width());
         $('#myInput').keyup(function() {
             $('.panel nav').addClass('activeSearch'); 
             myFunction();
         });
+        $('.panel label').click(function() {
+            console.log('hi ther');
+            $('.panel nav').toggleClass('activeSearch');
+        })
         $('.panel nav').click(function() {
             $('.panel nav').removeClass('activeSearch');
             $('#myInput').val("");

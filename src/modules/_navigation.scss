@@ -88,10 +88,6 @@ header {
         position: absolute;
         top: -999em;
         left: -999em;
-        &:checked ~ nav {
-            height: auto;
-            overflow: hidden;
-        }
     }
     label {
         display: block;
@@ -115,29 +111,7 @@ header {
         }
     }
 }
-
 .searchBox.activeSearch {
     height: auto;
+    overflow: hidden;
 }
-
-// .nav ul {
-//     position: relative;
-//     z-index: 1;
-// }
-// .nav li {
-//     position: relative;
-//     // width: 150px;
-// }
-// .nav ul ul {
-//     display: none;
-//     position: absolute;
-//     background-color: #0077a3;
-//     top: 34px;
-// }
-// .nav li li {
-//     border-bottom: solid 1px #fff;
-// }
-// .nav ul li:hover ul {
-//     display: block;
-//     z-index: 2;
-// }

@@ -92,6 +92,12 @@ label[for="city"], label[for="state"] {
 /*! end Shipping Form */
 
 /*! Image */
+.image {
+    background-color: #fff;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 4px;
+}
 .img-responsive {
     max-width: 100%;
     height: auto;
@@ -102,11 +108,155 @@ label[for="city"], label[for="state"] {
 .float-right {
     float: right;
 }
-.clearfix {
+.clearfix::after {
+    display: table;
+    content: "";
     clear: both;
 }
-.float-left:after {
-    display: table;
-    content: '';
-    clear: both;
+/*! end Image */
+
+/*! Nav Bar*/
+header.navBar {
+    background-color: lightseagreen;
+    input[type=checkbox] {
+        position: absolute;
+        top: -999em;
+        left: -999em;
+        &:checked ~ nav {
+            height: auto;
+            overflow: hidden;
+        }
+    }
+    label {
+        display: block;
+        background: url(../images/hamburger-menu.png)no-repeat right center;
+        text-indent: -999em;
+        height: 56px;
+        cursor: pointer;
+        @include browsers; // include mixin browsers
+        user-select: none;
+        position: relative;
+        top: 2px;
+        right: 8px;
+        @include break(500px) { display: none; }
+    }
+    
+    nav {
+        height: 0;
+        overflow: hidden;
+        @include break(500px) {
+            height: 100%;
+            overflow: visible;
+        }
+        ul{
+            @include break(0, 630px) { .logo { display: none; } }
+            li {
+                border-radius: 5px;
+                @include linx($text-color, $heading-color, $heading-color);
+                &:hover {
+                    // background-color: transparentize(lighten($background-hover, 4%), .2); //bult-in function: color
+                    &:first-of-type { background-color: transparent; }
+                }
+                a { 
+                    font-weight: bold;
+                    display: block;
+                    padding: 12px 10px;
+                    text-transform: uppercase;
+                }
+            } 
+            @include break(500px) {
+                display: flex;
+                justify-content: center;
+                li:first-of-type { margin-right: auto; }
+                li {
+                    a {
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        width: 150px;
+                        height: 56px;
+                        &.logo { padding: 0; }
+                    }
+                }
+            }
+        }
+    }
+} 
+
+/*! Table */
+td, th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+    vertical-align: top;
+}
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+tr:nth-of-type(even) {
+    background: #fff;
+}
+
+@media screen and (min-width:720px) {
+    table {
+        border-collapse: collapse;
+    }
+    th {
+        background: #333;
+        color: #fff;
+        font-weight: bold;
+    }
+    td, th {
+        font-size: 85%;
+    }
+    td:first-child {
+        max-width: 100%; 
+    }
+    th:not(:first-child) {
+        min-width: 70px;
+    }
+}
+
+@include break(0,760px) {
+    table, thead, tbody, th, td,tr {
+        display: block;
+    }
+    thead th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    td {
+        border: none;
+        border-bottom: solid 1px #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:nth-of-type(odd) {
+        border-bottom: solid 1px #fff;
+    }
+    td:before {
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    td:nth-of-type(1):before {content: " ";}
+    td:nth-of-type(2):before {content: "Name:";}
+    td:nth-of-type(3):before {content: "Color:";}
+    td:nth-of-type(4):before {content: "Material:";}
+    td:nth-of-type(5):before {content: "Size:";}
+    td:nth-of-type(6):before {content: "Weight:";}
+    td:nth-of-type(7):before {content: "Price:";}
+
+    td:nth-of-type(1) {
+        padding-left: 10px;
+    }
+}
+@include break(0px, 450px) {
+    td, th {
+        font-size: 85%;
+    }
 }

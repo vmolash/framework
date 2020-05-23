@@ -41,7 +41,10 @@
                     <ul id="myUL">
                         <li class="panel-item"><a href="#grid">Grid</a></li>
                         <li class="panel-item"><a href="#form">Form</a></li>
-                        <li class="panel-item"><a href="#doc3">Image</a></li>
+                        <li class="panel-item"><a href="#image">Image</a></li>
+                        <li class="panel-item"><a href="#navBar">Nav Bar</a></li>
+                        <li class="panel-item"><a href="#table">Table</a></li>
+
                         <li class="panel-item"><a href="#doc4">Buttons</a></li>
                     </ul>
                 </nav>
@@ -273,20 +276,132 @@
             <section >
                 <h2 id="image">Image</h2>
                 <p>Images are placed in their own folder, and linked by URL, either on the HTML or CSS files. Here are some links to show how. Also, it’s important to make images responsive. It’s a simple matter, done by class on HTML and then linked on CSS, with the simple responsiveness code below.</p>
-                <figure>
+                <div class="image">
+                    <h3>Responsive Image</h3>
                     <img src="../images/responsive_image.jpg" alt="Responsive image" class="img-responsive">
-                    <figcaption>Responsive Image</figcaption>
-                </figure>
-                <figure>
-                    <img src="../images/float_left.jpg" alt="Image float" class="float-left">
+                </div>
+<figure>
+<pre><code>
+&lt;div&gt;
+    &lt;h3&gt;Responsive Image&lt;/h3&gt;
+    &lt;img src="../images/responsive_image.jpg" alt="Responsive image" class="img-responsive"&gt;
+&lt;/div&gt;
+</code></pre>
+</figure>
+                <p>Floats allow us to move a picture into the right place on our website. It’s possible to position it left or right on our CSS file. Here are some examples. It works best with clearfix.</p>
+                <p>Maybe your photo is a little too big for the textbox you wish to place it in, and it is floated, it will overflow outside of its container. Solution: Add the clearfix as a helper class to the containing element on HTML to make the page fit together well.</p>
+                <div class="image clearfix">
+                    <h3>Image float left</h3>
+                    <img src="../images/float_left.jpg" alt="Image float" class="float-left img-responsive">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam reprehenderit blanditiis accusantium sit, laboriosam quia nobis aliquid ut magni culpa voluptates, deleniti nostrum aliquam asperiores porro illo vitae vel unde.</p>
-                    <figcaption class="clearfix">Image float left</figcaption>
-                </figure>
-                <figure>
-                    <img src="../images/float_right.jpg" alt="Image float" class="float-right">
+                </div>
+<figure>
+<pre>
+<code>
+&lt;div class="clearfix"&gt;
+    &lt;h3&gt;Image float left&lt;/h3&gt;
+    &lt;img src="../images/float_left.jpg" alt="Image float" class="float-left"&gt;
+    &lt;p&gt;Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam reprehenderit blanditiis accusantium sit, laboriosam quia nobis aliquid ut magni culpa voluptates, deleniti nostrum aliquam asperiores porro illo vitae vel unde.&lt;/p&gt;
+    
+&lt;/div&gt;
+</code>
+</pre>
+</figure>
+                <div class=" image clearfix">
+                    <h3 >Image float right</h3>
+                    <img src="../images/float_right.jpg" alt="Image float" class="float-right img-responsive">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, rem? Quae repellendus autem earum, nemo doloribus, rem eligendi consequatur officia id reiciendis est. Dolorum, fuga dolor rem alias quis excepturi.</p>
-                    <figcaption class="clearfix">Image float right</figcaption>
-                </figure>
+                </div>
+<figure>
+<pre><code>
+&lt;div class="clearfix"&gt;
+    &lt;img src="../images/float_right.jpg" alt="Image float" class="float-right"&gt;
+    &lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, rem? Quae repellendus autem earum, nemo doloribus, rem eligendi consequatur officia id reiciendis est. Dolorum, fuga dolor rem alias quis excepturi.&lt;/p&gt;
+    &lt;h3&gt;Image float right&lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
+</figure>
+            </section>
+            <section>
+                <h2 id="navBar">Navigation Bar</h2>
+                    <div class="container navBar">
+                        <input type="checkbox" id="toggle">
+                        <label for="toggle">Menu</label>
+                        <nav class="nav">
+                            <ul>
+                                <li><a href="#" class="logo"><img src="../images/logo.png" alt=""></a></li>
+                                <li><a href="../index.html" class="nav-item">Home</a></li>
+                                <li><a href="#" class="nav-item active drop">Shop</a></li>
+                                <li><a href="download.html" class="nav-item">About</a></li>
+                                <li><a href="demo.html" class="nav-item">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                
+
+            </section>
+            <section>
+                <h2 id="table">Table</h2>
+                <p>Tables are useful for comparing products and data. Some have colored stripes for easy reading. They can be styled either with CSS or HTML and placed in those files. Here’s one in HTML:</p>
+                <h3>Responsive Table</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>Name</th>
+                            <th>Color</th>
+                            <th>Material</th>
+                            <th>Size</th>
+                            <th>Weight</th>
+                            <th>Price</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="../images/ring.jpg" alt=""></td>
+                            <td>Ring</td>
+                            <td>Gold</td>
+                            <td>Metal - Yellow Gold</td>
+                            <td>5</td>
+                            <td>0.3oz</td>
+                            <td>$200</td>
+                            
+                        </tr>
+                        <tr>
+                            <td><img src="../images/bracelet.jpg" alt=""></td>
+                            <td>Braslet</td>
+                            <td>Pink</td>
+                            <td>Metal - Pink Gold</td>
+                            <td>L</td>
+                            <td>0.7oz</td>
+                            <td>$150</td>
+                            
+                        </tr>
+                        <tr>
+                            <td><img src="../images/earrings.jpg" alt=""></td>
+                            <td>Earrings</td>
+                            <td>Silver</td>
+                            <td>Metal - Silver</td>
+                            <td>S</td>
+                            <td>0.35oz</td>
+                            <td>$300</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../images/pendant.jpg" alt=""></td>
+                            <td>Pendant</td>
+                            <td>Silver</td>
+                            <td>Metal - White Gold</td>
+                            <td>M</td>
+                            <td>0.2oz</td>
+                            <td>$120</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Colored Table</h3>
+                <h3>Bordered Table</h3>
+
             </section>
             <section class="full-height">
                 <h2 id="doc4">Heading Doc-4</h2>

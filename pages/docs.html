@@ -28,7 +28,7 @@
         </div>
     </header>
 
-    <div class="wrapper">
+    <main class="wrapper">
         <div class="panel">
             <div>
                 <!-- <h3>Documentation</h3> -->
@@ -39,75 +39,254 @@
 
                 <nav class="searchBox">
                     <ul id="myUL">
-                        <li class="panel-item"><a href="#doc1">Fonts</a></li>
-                        <li class="panel-item"><a href="#doc2">Typography</a></li>
-                        <li class="panel-item"><a href="#doc3">Table</a></li>
+                        <li class="panel-item"><a href="#grid">Grid</a></li>
+                        <li class="panel-item"><a href="#form">Form</a></li>
+                        <li class="panel-item"><a href="#doc3">Image</a></li>
                         <li class="panel-item"><a href="#doc4">Buttons</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
         <div class="mainDoc">
-            <section >
-                <h2 id="doc1">Heading Doc-1</h2>
+            <section>
+                <a name="target"> </a>
+                <h2 id="grid">Grid</h2>
 
-                <p>Odio cupiditate officiis totam suscipit assumenda exercitationem accusamus odit eligendi, libero labore provident impedit dolores ex eveniet sequi eos similique, atque esse cum eaque placeat fugit. Dolorem rerum rem asperiores?</p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, necessitatibus architecto libero provident fugiat distinctio laboriosam aut animi, nemo, amet et ipsa voluptas quam voluptatibus laborum delectus quisquam suscipit asperiores.</p>
-                <p>Aliquid at optio odit libero nemo, placeat consequuntur dolorum accusamus illo corporis, eligendi sequi labore eaque quidem animi totam deserunt modi nam quam possimus iusto ad. Maiores nemo suscipit nam!</p>
-                <p>Repudiandae maxime doloremque sunt? Porro, numquam accusantium quos voluptas provident explicabo sit omnis nemo perspiciatis adipisci dolore. Natus, repudiandae et iste, rerum cum voluptates est temporibus minima reiciendis non veniam.</p>
-                <p>Quia esse nulla impedit amet sunt odit incidunt eaque doloremque rem sit debitis ipsam necessitatibus assumenda ex culpa, ratione ad, maiores reiciendis? Voluptate repellendus fuga praesentium deleniti velit expedita rerum.</p>
-                <p>Ipsam similique in dolore, nemo, optio libero quos perferendis iusto, pariatur alias necessitatibus voluptatem inventore laboriosam. Quibusdam voluptas perferendis atque esse, qui quia repudiandae dolor debitis tempora maiores. Veritatis, facilis!</p>
+                <p>Grid enables the website to be ‘responsive’ or viewable on any screen in the same way. The pictures and other components size up, or size down. We place this code in with the CSS file.</p>
+                <section class="m-1 gr-full">
+                    <article>Col 1</article>
+                </section>
+                <section class="m-1 gr-half">
+                    <article>Col 1/2</article>
+                    <article>Col 1/2</article>
+                </section>
+                <section class="m-1 gr-third">
+                    <article>Col 1/3</article>
+                    <article>Col 1/3</article>
+                    <article>Col 1/3</article>
+                </section>
+                <section class="m-1 gr-fourth">
+                    <article>Col 1/4</article>
+                    <article>Col 1/4</article>
+                    <article>Col 1/4</article>
+                    <article>Col 1/4</article>
+                </section>
 
 <figure>
 <pre>
 <code>
-&lt;div class="container"&gt;
-    &lt;div class="row"&gt;
-    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
-    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="container"&gt;
-    &lt;div class="row"&gt;
-    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
-    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="container"&gt;
-    &lt;div class="row"&gt;
-    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
-    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="container"&gt;
-    &lt;div class="row"&gt;
-    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
-    &lt;div class="one-half column"&gt;1/2&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+&lt;!-- Grid --&gt;
+&lt;section class="m-1 gr-full"&gt;
+    &lt;article>Col 1&lt;/article>
+&lt;/section>
+&lt;section class="m-1 gr-half">
+    &lt;article>Col 1/2&lt;/article>
+    &lt;article>Col 1/2&lt;/article>
+&lt;/section>
+&lt;section class="m-1 gr-third">
+    &lt;article>Col 1/3&lt;/article>
+    &lt;article>Col 1/3&lt;/article>
+    &lt;article>Col 1/3&lt;/article>
+&lt;/section>
+&lt;section class="m-1 gr-fourth">
+    &lt;article>Col 1/4&lt;/article>
+    &lt;article>Col 1/4&lt;/article>
+    &lt;article>Col 1/4&lt;/article>
+    &lt;article>Col 1/4&lt;/article>
+&lt;/section&gt;
 </code>
 </pre>
 </figure>
             </section>
             <section >
-                <h2 id="doc2">Heading Doc-2</h2>
-                <p>Quis temporibus nisi vero, libero aut perspiciatis non perferendis id qui facilis eos veniam totam accusantium quibusdam quod dolores dolorum nam ipsum, enim obcaecati laboriosam explicabo eaque neque. Illo, tempore!</p>
-                <p>Sunt sapiente, blanditiis earum voluptate nobis iusto quasi reiciendis architecto maxime provident libero, dolor odit! Maxime voluptatem, beatae at non facere voluptate voluptates aliquam. In commodi error molestias ullam itaque!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam officia sit, dolores incidunt velit qui quisquam nesciunt, minus debitis magni dolore nostrum quos ullam obcaecati! Pariatur rerum sapiente ea non?</p>
-                <p>Cumque, repudiandae tempora culpa dicta pariatur fugiat assumenda sunt impedit similique temporibus eveniet illo praesentium quas sapiente atque harum dolores dolorem molestias? Totam ratione placeat laborum labore molestiae? Itaque, beatae?</p>
-                <p>Quis, velit? Corrupti aliquid quam aliquam alias perspiciatis consectetur, eius ex laboriosam! Pariatur officiis accusamus fugit? Quidem possimus cum sequi temporibus ratione quis sapiente rem quasi adipisci. Animi, ex iusto.</p>
-                <p>Corrupti at facere provident consectetur consequatur minima, velit modi quia excepturi culpa laboriosam eum deserunt ab vero autem quaerat dignissimos nesciunt ducimus tempora voluptates laborum. Magni nulla excepturi vel minima?</p>
-                <p>Eveniet suscipit, impedit voluptatibus natus cupiditate doloribus laborum! Blanditiis expedita ratione hic eum cum, ducimus dolorem magni esse eaque consectetur atque, reiciendis a natus voluptate nisi voluptates placeat quisquam nulla.</p>
+                <h2 id="form">Form</h2>
+                <p>If you sell jewelry, you will need sales and contact forms to interact with your customers as they select and place goods in their shopping carts and perhaps contact you for customer service. That will require the use of a third file called Javascript, which is for creating actions on the website. Here are some important forms which can be placed in the HTML and Javascript (JS) files.</p>
+                
+                <form>
+                    <h3>Contact Form</h3>
+                    <label for="name" >Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Name&#42;" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email&#42;" required>
+    
+                    <label for="subject">Subject:</label>
+                    <select name="subject" id="subject">
+                    <option value="-- select --">-- Select subject--</option>
+                    <option value="Claim">Claim</option>
+                    <option value="review">Review</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="other">Other</option>
+                    </select>
+                    
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" placeholder="Message&#42;" required></textarea>
+    
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </form>
+<figure>
+<pre>
+<code>
+&lt;form action="">
+    &lt;h3&gt;Contact Form&lt;/h3&gt;
+    &lt;label for="name" &gt;Name:&lt;/label&gt;
+    &lt;input type="text" name="name" id="name" placeholder="Name&#42;" required&gt;
+    
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" name="email" id="email" placeholder="Email&#42;" required&gt;
+
+    &lt;label for="subject"&gt;Subject:&lt;/label&gt;
+    &lt;select name="subject" id="subject"&gt;
+    &lt;option value="-- select --"&gt;-- Select subject--&lt;/option&gt;
+    &lt;option value="Claim"&gt;Claim&lt;/option&gt;
+    &lt;option value="review"&gt;Review&lt;/option&gt;
+    &lt;option value="partnership"&gt;Partnership&lt;/option&gt;
+    &lt;option value="other"&gt;Other&lt;/option&gt;
+    &lt;/select&gt;
+    
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea name="message" id="message" placeholder="Message&#42;" required&gt;&lt;/textarea&gt;
+
+    &lt;button type="reset"&gt;Reset&lt;/button&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code>
+</pre>
+</figure>
+
+                    <form action="#" method="GET" id="checkoutForm">
+                        <h3>Shipping Information</h3>
+                            <div class="cols">
+                                <div class="col checkout">
+                                    <fieldset>
+                                        <legend>Promo or Coupon Code</legend>
+                                        <label for="promo">Eneter code to aplly discount:</label>
+                                        
+                                        <div class="row">
+                                            <input type="text" name="promo" id="promo" placeholder="enter code here">
+                                            <input type="button" value="Apply">
+                                        </div>
+                                        
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Ship to:</legend>
+                                        <div class="row">
+                                            <label for="fName">First Name:</label>
+                                            <input type="text" name="fName" if="fName" required>
+                                        </div>
+                                        <div class="row">
+                                            <label for="lName">Last Name:</label>
+                                            <input type="text" name="lName" id="lName" required>
+                                        </div>
+                                        <div class="row">
+                                            <label for="address">Address:</label>
+                                            <input type="text" name="address" id="address" required>
+                                        </div>
+                                        <div class="row">
+                                            <label for="zip">Zip Code:</label>
+                                            <input type="text" name="zip" id="zip" required>
+                                        </div>
+                                        <div class="row">
+                                            <label for="city">City:</label>
+                                            <input type="text" name="city" id="city" required>
+            
+                                            <label for="state">State:</label>
+                                            <select name="state" id="state">
+                                                <option value=" " selected></option>
+                                                <option value="AL">Al</option>
+                                                <option value="AK">AK</option>
+                                                <option value="AZ">AZ</option>
+                                                <option value="AR">AR</option>
+                                                <option value="CA">CA</option>
+                                                <option value="CO">CO</option>
+                                                <option value="CT">CT</option>
+                                                <option value="DE">DE</option>
+                                                <option value="DC">DC</option>
+                                                <option value="FL">FL</option>
+                                                <option value="GA">GA</option>
+                                                <option value="HI">HI</option>
+                                                <option value="ID">ID</option>
+                                                <option value="IL">IL</option>
+                                                <option value="IN">IN</option>
+                                                <option value="IA">IA</option>
+                                                <option value="KS">KS</option>
+                                                <option value="KY">KY</option>
+                                                <option value="LA">LA</option>
+                                                <option value="ME">ME</option>
+                                                <option value="MD">MD</option> 
+                                                <option value="MA">MA</option>
+                                                <option value="MS">MS</option>
+                                                <option value="MO">MO</option>
+                                                <option value="MT">MT</option>
+                                                <option value="NE">NE</option>
+                                                <option value="NV">NV</option>
+                                                <option value="NH">NH</option>
+                                                <option value="NJ">NJ</option>
+                                                <option value="NM">NM</option>
+                                                <option value="NY">NY</option>
+                                                <option value="NC">NC</option>
+                                                <option value="ND">ND</option>
+                                                <option value="OH">OH</option>
+                                                <option value="OK">OK</option>
+                                                <option value="OR">OR</option>
+                                                <option value="PA">PA</option>
+                                                <option value="RI">RI</option>
+                                                <option value="SC">SC</option>
+                                                <option value="SD">SD</option> 
+                                                <option value="TN">TN</option>
+                                                <option value="TX">TX</option>
+                                                <option value="UT">UT</option>
+                                                <option value="VT">VT</option>
+                                                <option value="VA">VA</option>
+                                                <option value="WA">WA</option>
+                                                <option value="WV">WV</option>
+                                                <option value="WI">WI</option>
+                                                 <option value="WY">WY</option> 
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                </fieldset>
+            
+                                <div class="row">
+                                    <fieldset>
+                                        <legend>Additional information</legend>
+                                        <label for="email">Email address</label>
+                                        <input type="email" name="email" id="email" required>
+            
+                                        <label for="tell">Phone Number:</label>
+                                        <input type="tel" name="tell" id="tell" placeholder="123-456-7890" maxlength="12" 
+                                       pattern="^\d{3}-\d{3}-\d{4}$" required>
+                                    </fieldset>
+                                </div>
+            
+                                <div class="row">
+                                        <fieldset>
+                                            <legend>Submit your order</legend>
+                                            <input type="submit">
+                                        </fieldset>
+                                    </div>
+                                </div><!--end col -->
+                            </div> <!--end cols -->
+                        </form>
             </section>
             <section >
-                <h2 id="doc3">Heading Doc-3</h2>
-                <p>Animi mollitia iure nemo ipsam qui, voluptate sequi iusto labore placeat, neque a, soluta tenetur quasi provident quas! Ad neque velit laudantium dolore quis perferendis, nesciunt nam natus quos voluptate?</p>
-                <p>Optio quaerat asperiores libero quis iusto eum incidunt? Odit quam nisi inventore numquam praesentium in nostrum, adipisci quod eaque corporis doloremque dolore! Ipsum omnis quae, quidem reprehenderit assumenda ducimus culpa!</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum corrupti natus, quibusdam delectus voluptatibus cum. Repudiandae iusto sequi dolorem, inventore beatae facilis quis? Molestias eaque, dolor consequatur voluptatem similique eligendi.</p>
-                <p>Quaerat reprehenderit non perferendis praesentium officia illo quae fugit saepe vero minima quis, quisquam sint quas eligendi nisi error officiis dolores quidem sit enim? Neque explicabo vitae itaque fugit quidem?</p>
-                <p>Consectetur, minima voluptatum dolor sequi delectus aspernatur sunt dignissimos nihil fugit? Eius doloribus, voluptatem libero quasi tempora sint omnis sit ab veniam ipsam dolorum aut magni porro explicabo ipsum reiciendis.</p>
-                <p>Neque vitae, ab ex nemo magni facilis mollitia quidem earum! Repellendus veniam impedit minima mollitia dolores nostrum natus, autem consectetur. Fugiat perferendis nemo laboriosam ad, cum qui porro. Explicabo, deleniti.</p>
-                <p>Sunt cupiditate dicta sed beatae voluptate consequatur sapiente alias fuga quidem. Amet, voluptate autem doloremque recusandae consectetur officiis. Accusamus quos libero rem deserunt incidunt possimus facere eveniet laborum, optio eligendi.</p>
+                <h2 id="image">Image</h2>
+                <p>Images are placed in their own folder, and linked by URL, either on the HTML or CSS files. Here are some links to show how. Also, it’s important to make images responsive. It’s a simple matter, done by class on HTML and then linked on CSS, with the simple responsiveness code below.</p>
+                <figure>
+                    <img src="../images/responsive_image.jpg" alt="Responsive image" class="img-responsive">
+                    <figcaption>Responsive Image</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/float_left.jpg" alt="Image float" class="float-left">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam reprehenderit blanditiis accusantium sit, laboriosam quia nobis aliquid ut magni culpa voluptates, deleniti nostrum aliquam asperiores porro illo vitae vel unde.</p>
+                    <figcaption class="clearfix">Image float left</figcaption>
+                </figure>
+                <figure>
+                    <img src="../images/float_right.jpg" alt="Image float" class="float-right">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, rem? Quae repellendus autem earum, nemo doloribus, rem eligendi consequatur officia id reiciendis est. Dolorum, fuga dolor rem alias quis excepturi.</p>
+                    <figcaption class="clearfix">Image float right</figcaption>
+                </figure>
             </section>
             <section class="full-height">
                 <h2 id="doc4">Heading Doc-4</h2>
@@ -117,7 +296,12 @@
                 
             </section>
         </div>
-    </div>
+    </main>
+    <footer class="fixedFooter">
+        <p>&copy; 2020 - Framework</p>
+    </footer>
+
+    
 
     <script
     src="https://code.jquery.com/jquery-3.5.1.min.js"

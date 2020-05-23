@@ -49,36 +49,35 @@ function search() {
 }
 search();
 
-// $('#togglePanel').click
-
-// $(window).resize(function() {
-//     if( $(this).width() > 580 ) {
-
-//     }
-// });
-
-// Active link sets to green color when click on it
-// const NAVCONTAINER = document.querySelector('nav');
-// const NAVITEMS = NAVCONTAINER.getElementsByClassName('nav-item');
-
-// for(let i = 0; i < NAVITEMS.length; i++) {
-//   NAVITEMS[i].addEventListener('click', function() {
-//     let current = document.getElementsByClassName('active');
-//     current[0].className = current[0].className.replace(' active', '');
-//     this.className += ' active';
-//   });
-// }
-
-// Hide navigation on mobile version when click on any link
-// console.log(window.screen.width);
-// const NAVIGAT = document.querySelector('nav');
-// const LAB = document.querySelector('label');
-
-// if(window.screen.width < 500) {
-//   LAB.addEventListener('click', function() {
-//     NAVIGAT.classList.toggle('show');
-//   });
-//   NAVIGAT.addEventListener('click', function() {
-//     this.classList.toggle('show');
-//   });
-// }
+// Shipping form
+$(document).ready(function() {
+    // http://ZiptasticAPI.com/ZIPCODE OR http://ZiptasticAPI.com/ZIPCODE?callback=myCallback
+   
+       
+   
+       $('#zip').keyup(function(e) {
+           var zip = $(this).val();
+           if(zip.length === 5 && $.isNumeric(zip)) {
+               var requestUrL = 'http://ZiptasticAPI.com/' + zip + '?callback=?';
+               $.getJSON(requestUrL, null, function(data){
+                   console.log(data);
+                   if(data.city) $('#city').val(data.city);
+                   if(data.state) $('#state').val(data.state);
+               });
+           }
+       });
+   
+       // phone fix
+       $('input[type="tel"]').keyup(function(e) {
+           var tar = e.target;
+           var val = tar.value;
+           console.log(val);
+           if(val.length == 3) { 
+               tar.value = val + '-';
+           }
+           if(val.length == 7) {
+               tar.value = val + '-';
+           }
+       })
+   }); //end doc ready
+   // end Shipping form

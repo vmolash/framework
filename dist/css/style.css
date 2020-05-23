@@ -13,7 +13,11 @@ li {
 }
 
 body {
-  background-color: green;
+  background-color: #99b8a8;
+}
+
+main {
+  background-color: #ededed;
 }
 
 .panel {
@@ -70,10 +74,14 @@ h2 {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
 header {
   display: block;
   position: fixed;
-  background-color: lightcoral;
   top: 0;
   z-index: 2;
   width: 100%;
@@ -81,6 +89,20 @@ header {
 
 header a {
   display: inline-block;
+}
+
+footer {
+  background-color: #ccc;
+}
+
+@media (min-width: 580px) {
+  footer.fixedFooter {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    z-index: 6;
+    width: 100%;
+  }
 }
 
 pre {
@@ -124,6 +146,12 @@ figure {
   padding: 2rem;
 }
 
+article {
+  background-color: lightseagreen;
+  border: solid 1px #dedede;
+  margin: .2rem;
+}
+
 header {
   background-color: #444;
 }
@@ -143,7 +171,7 @@ header label {
   display: block;
   background: url(../images/hamburger-menu.png) no-repeat right center;
   text-indent: -999em;
-  height: 44px;
+  height: 56px;
   cursor: pointer;
   -webkit-user-select: none;
   /*Chrome all / Safari all */
@@ -236,7 +264,7 @@ header nav ul li a {
   position: absolute;
   top: 0;
   left: 0;
-  margin: 10px;
+  margin: 15px;
   width: 80%;
   z-index: 3;
 }
@@ -302,4 +330,137 @@ header nav ul li a {
 .show {
   height: 100%;
   overflow: hidden;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+/*! Grid */
+.gr-full {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+@media (min-width: 579px) {
+  .gr-half {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .gr-third {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .gr-fourth {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+/*! Form */
+input, label, textarea {
+  display: block;
+}
+
+input {
+  border: solid 1px #ccc;
+}
+
+/*! Shipping Form */
+#col1 {
+  width: 75%;
+  float: left;
+  padding-right: 1em;
+}
+
+#col2 {
+  width: 25%;
+  float: left;
+}
+
+#col1 li {
+  display: inline-block;
+  width: 33%;
+}
+
+#sCrit img {
+  width: 100%;
+}
+
+#sCrit .info {
+  width: 25%;
+  margin-left: 2%;
+  padding: 4px;
+  font-size: 85%;
+  line-height: 1.2;
+  background-color: #fff;
+  border: solid 1px #99b8a8;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  display: none;
+}
+
+ul#description {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* form styles */
+fieldset {
+  padding: 1em;
+}
+
+legend {
+  color: #999;
+}
+
+.row {
+  margin-bottom: .5em;
+}
+
+input {
+  border: solid 1px #99b8a8;
+  padding: .2em;
+}
+
+label {
+  display: block;
+}
+
+input[id="address"] {
+  width: 250px;
+}
+
+label[for="city"], label[for="state"] {
+  display: inline-block;
+}
+
+/*! end Shipping Form */
+/*! Image */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.float-left:after {
+  display: table;
+  content: '';
+  clear: both;
 }

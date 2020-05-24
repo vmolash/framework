@@ -573,9 +573,12 @@ header.navBar nav ul li a {
 /*! Table */
 td, th {
   padding: 6px;
-  border: 1px solid #ccc;
   text-align: left;
   vertical-align: top;
+}
+
+.bordered td, th {
+  border: 1px solid #ccc;
 }
 
 tr:nth-of-type(odd) {
@@ -583,7 +586,7 @@ tr:nth-of-type(odd) {
 }
 
 tr:nth-of-type(even) {
-  background: #fff;
+  background: lightgoldenrodyellow;
 }
 
 @media screen and (min-width: 720px) {
@@ -607,24 +610,24 @@ tr:nth-of-type(even) {
 }
 
 @media (min-width: 0) and (max-width: 760px) {
-  table, thead, tbody, th, td, tr {
+  table.responsive, .responsive thead, .responsive tbody, .responsive th, .responsive td, .responsive tr {
     display: block;
   }
-  thead th {
+  .responsive thead th {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  td {
+  .responsive td {
     border: none;
     border-bottom: solid 1px #eee;
     position: relative;
     padding-left: 50%;
   }
-  td:nth-of-type(odd) {
+  .responsive td:nth-of-type(odd) {
     border-bottom: solid 1px #fff;
   }
-  td:before {
+  .responsive td:before {
     position: absolute;
     left: 6px;
     width: 45%;
@@ -632,34 +635,34 @@ tr:nth-of-type(even) {
     white-space: nowrap;
     font-weight: bold;
   }
-  td:nth-of-type(1):before {
+  .responsive td:nth-of-type(1):before {
     content: " ";
   }
-  td:nth-of-type(2):before {
+  .responsive td:nth-of-type(2):before {
     content: "Name:";
   }
-  td:nth-of-type(3):before {
+  .responsive td:nth-of-type(3):before {
     content: "Color:";
   }
-  td:nth-of-type(4):before {
+  .responsive td:nth-of-type(4):before {
     content: "Material:";
   }
-  td:nth-of-type(5):before {
+  .responsive td:nth-of-type(5):before {
     content: "Size:";
   }
-  td:nth-of-type(6):before {
+  .responsive td:nth-of-type(6):before {
     content: "Weight:";
   }
-  td:nth-of-type(7):before {
+  .responsive td:nth-of-type(7):before {
     content: "Price:";
   }
-  td:nth-of-type(1) {
+  .responsive td:nth-of-type(1) {
     padding-left: 10px;
   }
 }
 
 @media (min-width: 0px) and (max-width: 450px) {
-  td, th {
+  .responsive td, .responsive th {
     font-size: 85%;
   }
 }

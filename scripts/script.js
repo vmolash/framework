@@ -17,17 +17,16 @@ function myFunction() {
         }
     }
 }
-$(window).resize(function() {
-    search();
-});
+$(window).resize(search());
 function search() {
     if( $(window).width() <= 580 ) {
         $('#myInput').keyup(function() {
+            console.log('hi keyup');
             $('.panel nav').addClass('activeSearch'); 
             myFunction();
         });
         $('.panel label').click(function() {
-            console.log('hi ther');
+            console.log('hi there');
             $('.panel nav').toggleClass('activeSearch');
         })
         $('.panel nav').click(function() {
@@ -47,7 +46,7 @@ function search() {
         });
     }
 }
-search();
+// search();
 
 // Shipping form
 $(document).ready(function() {

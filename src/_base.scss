@@ -1,8 +1,27 @@
-
+// html {
+//     scroll-padding-top: 100px; /* height of sticky header */
+//   }
 main {
-    background-color:  #99b8a8;
+    background-color:  $body-background;
+}
+header {
+    border-bottom: solid 1px #d4c9c5;
+}
+.logo {
+    width: 80px;
+    height: auto;
+}
+.jumbo {
+    background: url(../images/parallax.jpg) no-repeat center center;
+    background-size: cover;
 }
 .panel {
+    border-bottom: solid 1px #ccc;
+    background-color: #fff;
+    @include break(580px) {
+        border-bottom: none;
+        border-right: solid 1px #ccc;
+    }
     position: fixed;
     width: 100%;
     @include break(580px) {
@@ -13,7 +32,6 @@ main {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: lightpink;
     overflow-x: hidden;
     padding-top: 50px;
     @include break(580px) { padding-top: 90px; }
@@ -22,29 +40,38 @@ main {
     @include break(580px) {
         margin-left: 160px;
     }
-    margin-left: 0;
+    margin: 0;
     // padding-top: 90px;
+}
+section {
+    margin: 0 1.5rem;
 }
 .full-height {
     height: 100vh;
 }
-section, h2 {
-    position: relative;
-    // top: 20px;
-}
-h2 {
+// section, h2 {
+//     position: relative;
+//     // top: 20px;
+// }
+.mainDoc h2 {
+    // position: relative;
+    // & span {
+    //     position: absolute;
+    //     top: -56px;
+    // }
     padding-top: 135px;
+    
     @include break(580px) {
         padding-top: 85px;
+       
     }
     // height: 40px;
-    background-color: lightgreen;
 }
 html {
     scroll-behavior: smooth;
     overflow-y: scroll;
 }
-header {
+header.doc {
     display: block;
     position: fixed;
     top: 0;
@@ -65,9 +92,7 @@ footer {
     }
 }
 
-
 // code box
-
 pre {
     overflow: auto;
 }
@@ -97,17 +122,17 @@ code {
     ::-webkit-scrollbar-thumb:hover {
         background: #555;
     }
-    
 }
 figure {
-    margin: 2rem;
+    margin: 1.2rem 0;
     background-color: #dedede;
     border: 1px solid #E1E1E1;
     border-radius: 4px;
-    padding: 2rem;
+    padding: 1.4rem;
 }
 article {
     background-color: lightseagreen;
     border: solid 1px #dedede;
     margin: .2rem;
 }
+// end code box

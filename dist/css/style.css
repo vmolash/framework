@@ -12,19 +12,45 @@ li {
   list-style-type: none;
 }
 
+button, select, input, option {
+  border: none;
+}
+
 main {
-  background-color: #99b8a8;
+  background-color: #fefffa;
+}
+
+header {
+  border-bottom: solid 1px #d4c9c5;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+.jumbo {
+  background: url(../images/parallax.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 .panel {
+  border-bottom: solid 1px #ccc;
+  background-color: #fff;
   position: fixed;
   width: 100%;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: lightpink;
   overflow-x: hidden;
   padding-top: 50px;
+}
+
+@media (min-width: 580px) {
+  .panel {
+    border-bottom: none;
+    border-right: solid 1px #ccc;
+  }
 }
 
 @media (min-width: 580px) {
@@ -42,7 +68,7 @@ main {
 }
 
 .mainDoc {
-  margin-left: 0;
+  margin: 0;
 }
 
 @media (min-width: 580px) {
@@ -51,21 +77,20 @@ main {
   }
 }
 
+section {
+  margin: 0 1.5rem;
+}
+
 .full-height {
   height: 100vh;
 }
 
-section, h2 {
-  position: relative;
-}
-
-h2 {
+.mainDoc h2 {
   padding-top: 135px;
-  background-color: lightgreen;
 }
 
 @media (min-width: 580px) {
-  h2 {
+  .mainDoc h2 {
     padding-top: 85px;
   }
 }
@@ -75,7 +100,7 @@ html {
   overflow-y: scroll;
 }
 
-header {
+header.doc {
   display: block;
   position: fixed;
   top: 0;
@@ -83,7 +108,7 @@ header {
   width: 100%;
 }
 
-header a {
+header.doc a {
   display: inline-block;
 }
 
@@ -135,11 +160,11 @@ code ::-webkit-scrollbar-thumb:hover {
 }
 
 figure {
-  margin: 2rem;
+  margin: 1.2rem 0;
   background-color: #dedede;
   border: 1px solid #E1E1E1;
   border-radius: 4px;
-  padding: 2rem;
+  padding: 1.4rem;
 }
 
 article {
@@ -149,7 +174,7 @@ article {
 }
 
 header {
-  background-color: #444;
+  background-color: #fefffa;
 }
 
 header input[type=checkbox] {
@@ -210,15 +235,15 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: #d4c9c5;
 }
 
 header nav ul li a:hover {
-  color: #93d293;
+  color: #b77869;
 }
 
 header nav ul li a:active {
-  color: #93d293;
+  color: #b77869;
 }
 
 header nav ul li:hover:first-of-type {
@@ -244,7 +269,7 @@ header nav ul li a {
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 120px;
     height: 56px;
   }
   header nav ul li a.logo {
@@ -254,6 +279,7 @@ header nav ul li a {
 
 .panel div {
   position: relative;
+  padding-bottom: 1.3rem;
 }
 
 .panel div input {
@@ -313,13 +339,27 @@ header nav ul li a {
   }
 }
 
+.panel li {
+  margin: .5rem 1rem;
+}
+
+.panel .sub {
+  margin-left: 1.7rem;
+}
+
 .searchBox.activeSearch {
   height: auto;
   overflow: hidden;
 }
 
+#myInput {
+  border-radius: 4px;
+  padding: .5rem;
+}
+
 .active {
-  color: #93d293;
+  color: #b77869;
+  text-decoration: underline;
   transition: all 0.7s ease-in-out;
 }
 
@@ -357,91 +397,11 @@ header nav ul li a {
   }
 }
 
-/*! Form */
-input, label, textarea {
-  display: block;
-}
-
-input {
-  border: solid 1px #ccc;
-}
-
-/*! Shipping Form */
-#col1 {
-  width: 75%;
-  float: left;
-  padding-right: 1em;
-}
-
-#col2 {
-  width: 25%;
-  float: left;
-}
-
-#col1 li {
-  display: inline-block;
-  width: 33%;
-}
-
-#sCrit img {
-  width: 100%;
-}
-
-#sCrit .info {
-  width: 25%;
-  margin-left: 2%;
-  padding: 4px;
-  font-size: 85%;
-  line-height: 1.2;
-  background-color: #fff;
-  border: solid 1px #99b8a8;
-  border-radius: 4px;
-  position: absolute;
-  top: 50%;
-  display: none;
-}
-
-ul#description {
-  list-style-type: none;
-  margin-left: 0;
-}
-
-/* form styles */
-fieldset {
-  padding: 1em;
-}
-
-legend {
-  color: #999;
-}
-
-.row {
-  margin-bottom: .5em;
-}
-
-input {
-  border: solid 1px #99b8a8;
-  padding: .2em;
-}
-
-label {
-  display: block;
-}
-
-input[id="address"] {
-  width: 250px;
-}
-
-label[for="city"], label[for="state"] {
-  display: inline-block;
-}
-
-/*! end Shipping Form */
 /*! Image */
 .image {
-  background-color: #fff;
-  margin: 2rem;
-  padding: 2rem;
+  background-color: #f5f5f5;
+  margin: 1.2rem 0;
+  padding: 1.4rem;
   border-radius: 4px;
 }
 
@@ -452,10 +412,12 @@ label[for="city"], label[for="state"] {
 
 .float-left {
   float: left;
+  margin-right: .8rem;
 }
 
 .float-right {
   float: right;
+  margin-left: .8rem;
 }
 
 .clearfix::after {
@@ -464,24 +426,29 @@ label[for="city"], label[for="state"] {
   clear: both;
 }
 
+@media print {
+  .no-print, .no-print * {
+    display: none !important;
+  }
+}
+
 /*! end Image */
 /*! Nav Bar*/
-header.navBar {
-  background-color: lightseagreen;
+div.navBar {
+  background-color: #d4c9c5;
 }
 
-header.navBar input[type=checkbox] {
+div.navBar input[type=checkbox] {
   position: absolute;
-  top: -999em;
-  left: -999em;
+  display: none;
 }
 
-header.navBar input[type=checkbox]:checked ~ nav {
+div.navBar input[type=checkbox]:checked ~ nav {
   height: auto;
   overflow: hidden;
 }
 
-header.navBar label {
+div.navBar label {
   display: block;
   background: url(../images/hamburger-menu.png) no-repeat right center;
   text-indent: -999em;
@@ -500,50 +467,50 @@ header.navBar label {
 }
 
 @media (min-width: 500px) {
-  header.navBar label {
+  div.navBar label {
     display: none;
   }
 }
 
-header.navBar nav {
+div.navBar nav {
   height: 0;
   overflow: hidden;
 }
 
 @media (min-width: 500px) {
-  header.navBar nav {
+  div.navBar nav {
     height: 100%;
     overflow: visible;
   }
 }
 
-@media (min-width: 0) and (max-width: 630px) {
-  header.navBar nav ul .logo {
+@media (min-width: 0) and (max-width: 499px) {
+  div.navBar nav ul .logo {
     display: none;
   }
 }
 
-header.navBar nav ul li {
+div.navBar nav ul li {
   border-radius: 5px;
 }
 
-header.navBar nav ul li a {
+div.navBar nav ul li a {
   color: #fff;
 }
 
-header.navBar nav ul li a:hover {
+div.navBar nav ul li a:hover {
   color: #93d293;
 }
 
-header.navBar nav ul li a:active {
+div.navBar nav ul li a:active {
   color: #93d293;
 }
 
-header.navBar nav ul li:hover:first-of-type {
+div.navBar nav ul li:hover:first-of-type {
   background-color: transparent;
 }
 
-header.navBar nav ul li a {
+div.navBar nav ul li a {
   font-weight: bold;
   display: block;
   padding: 12px 10px;
@@ -551,21 +518,21 @@ header.navBar nav ul li a {
 }
 
 @media (min-width: 500px) {
-  header.navBar nav ul {
+  div.navBar nav ul {
     display: flex;
     justify-content: center;
   }
-  header.navBar nav ul li:first-of-type {
+  div.navBar nav ul li:first-of-type {
     margin-right: auto;
   }
-  header.navBar nav ul li a {
+  div.navBar nav ul li a {
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 110px;
     height: 56px;
   }
-  header.navBar nav ul li a.logo {
+  div.navBar nav ul li a.logo {
     padding: 0;
   }
 }
@@ -581,15 +548,15 @@ td, th {
   border: 1px solid #ccc;
 }
 
-tr:nth-of-type(odd) {
+.striped tr:nth-of-type(odd) {
   background: #eee;
 }
 
-tr:nth-of-type(even) {
+.striped tr:nth-of-type(even) {
   background: lightgoldenrodyellow;
 }
 
-@media screen and (min-width: 720px) {
+@media (min-width: 720px) {
   table {
     border-collapse: collapse;
   }
@@ -665,4 +632,126 @@ tr:nth-of-type(even) {
   .responsive td, .responsive th {
     font-size: 85%;
   }
+}
+
+/*! Jumbotron */
+.jumbotron {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(../images/jumbotron.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.jumbotron h3 {
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+.jumbotron p {
+  line-height: 1.1;
+  font-size: 1.2rem;
+  margin: .5rem 1.5rem 2rem;
+}
+
+/*! Contact Form */
+input, label, textarea {
+  display: block;
+}
+
+input, select, textarea {
+  border: solid 1px #e8e7e7;
+}
+
+.contact-form {
+  width: 50%;
+}
+
+.contact-form label {
+  display: block;
+  width: 70%;
+  font-style: italic;
+  padding-bottom: 0.5em;
+  padding-top: 1em;
+}
+
+.contact-form input {
+  display: block;
+  width: 70%;
+  font-size: 0.8em;
+  padding-bottom: 0.5em;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.contact-form #txt {
+  width: 400px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+.contact-form #subject {
+  display: block;
+  font-style: italic;
+  color: #d4c9c5;
+}
+
+.contact-form textarea {
+  display: block;
+  border: solid 1px #e8e7e7;
+  font-style: italic;
+  color: #d4c9c5;
+  font-size: 0.8em;
+  padding-bottom: 0.5em;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.contact-form #buttonSend {
+  width: 25%;
+  font-weight: 500;
+  background-color: #2e3e60;
+  border: none;
+  padding: 0.8em;
+}
+
+.contact-form #buttonSend:hover {
+  background-color: #2e3e60;
+  color: white;
+}
+
+.footer {
+  background-color: #1c2336;
+  color: #fff;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  margin: .5rem 0;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion-active, .accordion:hover {
+  background-color: #d4c9c5;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.accordion-panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }

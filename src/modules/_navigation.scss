@@ -1,4 +1,4 @@
-%bar{ background-color: $nav-background; }
+%bar{ background-color: $body-background; }
 // top bar menu
 header {
     @extend %bar; // extend shallow class bar
@@ -36,7 +36,7 @@ header {
             @include break(0, 630px) { .logo { display: none; } }
             li {
                 border-radius: 5px;
-                @include linx($text-color, $heading-color, $heading-color);
+                @include linx($nav-color, $nav-hover, $nav-hover);
                 &:hover {
                     // background-color: transparentize(lighten($background-hover, 4%), .2); //bult-in function: color
                     &:first-of-type { background-color: transparent; }
@@ -57,7 +57,7 @@ header {
                         display: grid;
                         justify-content: center;
                         align-items: center;
-                        width: 150px;
+                        width: 120px;
                         height: 56px;
                         &.logo { padding: 0; }
                     }
@@ -67,11 +67,11 @@ header {
     }
 } 
 
-
 // Docs navigation
 .panel {
     div {
         position: relative;
+        padding-bottom: 1.3rem;
         input {
             position: absolute;
             top: 0;
@@ -111,7 +111,17 @@ header {
         }
     }
 }
+.panel li {
+    margin: .5rem 1rem;
+}
+.panel .sub {
+    margin-left: 1.7rem;
+}
 .searchBox.activeSearch {
     height: auto;
     overflow: hidden;
+}
+#myInput {
+    border-radius: 4px;
+    padding: .5rem;
 }

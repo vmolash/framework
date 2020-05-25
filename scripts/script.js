@@ -17,9 +17,17 @@ function myFunction() {
         }
     }
 }
-$(window).resize(search());
-function search() {
+$(window).resize(function () {
+    searchDesktop();
+});
+$(window).resize(function() {
+    searchMobile();
+});
+searchDesktop();
+searchMobile();
+function searchMobile() {
     if( $(window).width() <= 580 ) {
+        console.log(window.screen.width);
         $('#myInput').keyup(function() {
             console.log('hi keyup');
             $('.panel nav').addClass('activeSearch'); 
@@ -37,7 +45,10 @@ function search() {
             }
         });
     }
+}
+function searchDesktop() {
     if( $(window).width() > 580) {
+        console.log(window.screen.width);
         $('.panel nav').click(function() {
             $('#myInput').val("");
             for(let i=0; i<li.length; i++) {
@@ -46,37 +57,55 @@ function search() {
         });
     }
 }
-// search();
 
-// Shipping form
-$(document).ready(function() {
-    // http://ZiptasticAPI.com/ZIPCODE OR http://ZiptasticAPI.com/ZIPCODE?callback=myCallback
-   
-       
-   
-       $('#zip').keyup(function(e) {
-           var zip = $(this).val();
-           if(zip.length === 5 && $.isNumeric(zip)) {
-               var requestUrL = 'http://ZiptasticAPI.com/' + zip + '?callback=?';
-               $.getJSON(requestUrL, null, function(data){
-                   console.log(data);
-                   if(data.city) $('#city').val(data.city);
-                   if(data.state) $('#state').val(data.state);
-               });
-           }
-       });
-   
-       // phone fix
-       $('input[type="tel"]').keyup(function(e) {
-           var tar = e.target;
-           var val = tar.value;
-           console.log(val);
-           if(val.length == 3) { 
-               tar.value = val + '-';
-           }
-           if(val.length == 7) {
-               tar.value = val + '-';
-           }
-       })
-   }); //end doc ready
-   // end Shipping form
+// searchMobile();
+// searchDesktop();
+
+
+
+// Accordion
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("accordion-active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+// const mainSections = document.querySelectorAll('section h2');
+//     const appearSections = {
+//       threshold: 0,
+//       rootMargin: '0px 0px 0px 0px'
+//   };
+
+  
+//     const activeOnScroll = new IntersectionObserver(function(entries, activeOnScroll){
+      
+//       entries.forEach(entry => {
+//         let id = entry.target.id;
+//         let link = document.querySelector('[href="#'+id+'"');
+//           if(!entry.isIntersecting) { // if not true
+//               return;
+//           } else {
+//             let current = document.getElementsByClassName('active');
+//             current[0].className = current[0].className.replace(' active', '');
+//             link.classList.add('active');
+//             activeOnScroll.unobserve(entry.target);
+//           }
+//       });
+//   }, appearSections);
+  
+//   mainSections.forEach(section => {
+//     activeOnScroll.observe(section);
+//   })

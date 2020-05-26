@@ -1,11 +1,20 @@
 // html {
 //     scroll-padding-top: 100px; /* height of sticky header */
 //   }
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
 main {
     background-color:  $body-background;
 }
 header {
     border-bottom: solid 1px #d4c9c5;
+}
+h2, h3 {
+    margin-left: 1rem;
+}
+h2 {
+    text-transform: uppercase;
 }
 .logo {
     width: 80px;
@@ -17,7 +26,10 @@ header {
 }
 .panel {
     border-bottom: solid 1px #ccc;
-    background-color: #fff;
+    background-color: $body-background;
+    a {
+        text-transform: uppercase;
+    }
     @include break(580px) {
         border-bottom: none;
         border-right: solid 1px #ccc;
@@ -60,6 +72,7 @@ section {
     //     top: -56px;
     // }
     padding-top: 135px;
+    padding-bottom: 1rem;
     
     @include break(580px) {
         padding-top: 85px;
@@ -75,9 +88,9 @@ header.doc {
     display: block;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
-    a { display: inline-block; }
+    // a { display: inline-block; }
 }
 footer {
     background-color: #ccc;
@@ -98,11 +111,12 @@ pre {
 }
 code {
     font-size: 1em;
-    display: block;
+    display: flex;
     color: #222;
     white-space: pre;
     word-wrap: break-word;
     max-height: 200px;
+    align-items: center;
     /* width */
     ::-webkit-scrollbar {
         width: 10px;
@@ -124,11 +138,12 @@ code {
     }
 }
 figure {
-    margin: 1.2rem 0;
+    margin: 1.2rem 0 3rem 0;
     background-color: #dedede;
     border: 1px solid #E1E1E1;
     border-radius: 4px;
     padding: 1.4rem;
+
 }
 article {
     background-color: lightseagreen;

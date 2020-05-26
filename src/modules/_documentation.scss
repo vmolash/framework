@@ -1,6 +1,117 @@
 .m-1 {
     margin: 1rem;
 }
+// FONT
+html {
+    font-size: 10px;
+}
+p, input, select, button, textarea, div {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+p {
+    padding: .5rem 1rem;
+}
+.h-large {
+    font-size: 2.5rem;
+}
+.h-med {
+    font-size: 2rem;
+}
+.h-sm {
+    font-size: 1.5rem;
+}
+.t-large {
+    font-size: 1.8rem;
+}
+.t-med {
+    font-size: 1.4rem;
+}
+.t-sm {
+    font-size: 1.2rem;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}
+.bold {
+    font-weight: bold;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.t-green {
+    color: rgb(18, 130, 18);
+}
+.t-yellow {
+    color: rgb(218, 218, 19);
+}
+.t-orange {
+    color: rgb(228, 153, 15);
+}
+.t-blue {
+    color: rgb(9, 9, 203);
+}
+.t-skyblue {
+    color: rgb(182, 234, 255);
+}
+.t-purple {
+    color: rgb(111, 20, 111);
+}
+.t-gray {
+    color: rgb(84, 80, 80);
+}
+.t-pinkgray {
+    color: #a7a4a4;
+}
+.t-white {
+    color: #fff;
+}
+.bg-darkgray {
+    background-color:#7b7473;
+}
+.bg-lightgray {
+    background-color:#a7a4a4;
+}
+.bg-pinkgray {
+    background-color: #d5c9c6;
+}
+.bg-black {
+    background-color: #000;
+}
+.bg-white {
+    background-color: #fff;
+    border: solid 1px #f5f5f5;
+}
+.bg-darkwhite {
+    background-color: #f5f5f5;
+}
+.bg-yellow {
+    background-color: rgb(250, 250, 154);
+}
+.bg-orange {
+    background-color:#ffd8cb;
+}
+.bg-gold {
+    background-color: #e3c593;
+}
+.bg-green {
+    background-color: rgb(180, 244, 180);
+}
+.bg-purple {
+    background-color:#dd87a5;
+}
+.bg-blue {
+    background-color:#333f62;
+}
 /*! Grid */
 .gr-full {
     display: grid;
@@ -227,40 +338,80 @@ td, th {
 }
 // end Jumbotron
 
-// Form
-// form {
-//     background-color: #f5f5f5;
-//     padding: 2rem;
-// }
-// input, select, option, textarea, button {
-//     padding: .5rem;
-// }
-// select {
-//     height: 33px;
-//     border-radius: 0;
-//     border: none;
-// }
-// option {
-//     background-color: #2e3e60;
-//     color: #fff;
-// }
-// label {
-//     display: none;
-// }
 
-
+/*! Custom form */
+/* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    width: 100%;
+    font-style: italic;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color:#fff;
+    border: solid 1px #e8e7e7;
+    color: #666;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 40px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color:  rgb(46, 62, 96) transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent rgb(46, 62, 96) transparent;
+    top: 34px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    padding: 8px 16px;
+    // border: 1px solid transparent;
+    // border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    color: #fff;
+    background-color:rgb(46, 62, 96);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 /*! Contact Form */
-input, label, textarea {
-    display: block;
-}
 input, select, textarea {
     border: solid 1px rgb(232, 231, 231);
+    outline-color: #ffd7cb;
 }
 .contact-form {
-    width: 50%;
+    @include break(580px) {
+        width: 60%;
+    }
     label {
         display: block;
-        width: 70%;
+        width: 100%;
         font-style: italic;
         // font-family: $fontFamily;
         // font-weight: $fontWeightH2;
@@ -271,56 +422,115 @@ input, select, textarea {
     }
     input {
         display: block;
-        width: 70%;
+        width: 100%;
+        font-style: italic;
         // font-family: $fontFamily;
         // font-weight: $fontWeightH2;
         // color: $fontColorTxt;
-        font-size: 0.8em;
         padding-bottom: 0.5em;
         padding-top: 1em;
         padding-left: 1em;
     }
     #txt {
-        width: 400px;
+        width: 100%;
         height: 100px;
         margin-bottom: 30px;
     }
-    #subject {
-        display: block;
-        font-style: italic;
-        // font-family: $fontFamily;
-        // font-weight: $fontWeightH2;
-        color: #d4c9c5;
-    }
     textarea {
         display: block;
-        // width: 413px;
-        // height: 129px;
         border: solid 1px rgb(232, 231, 231);
-        // box-sizing: border-box;
         font-style: italic;
-        // font-weight: $fontWeightH2;
-        // color: $fontColorTxt;
         color: #d4c9c5;
-        font-size: 0.8em;
-        //font-size: $fontSizeH2;
         padding-bottom: 0.5em;
         padding-top: 1em;
         padding-left: 1em;
     }
     #buttonSend {
-        width: 25%;
+        color:  rgb(46, 62, 96);
+        margin-left: auto;
         font-weight: 500;
-        background-color: rgb(46, 62, 96);
+        background-color: #ffd7cb;
+        border-radius: 20px;
         border: none;
-        padding: 0.8em;
+        box-shadow: 2px 4px 6px #eac1b5;
+        padding: .5rem .7rem;
+        cursor: pointer;
+        @include break(580px) {
+            width: 6rem;
+        }
     }
     #buttonSend:hover {
         background-color: rgb(46, 62, 96);
+        box-shadow: 2px 4px 6px  rgb(46, 62, 96);
         color: rgb(255,255,255);
     }
 }
+.smBtn {
+    padding: 7.5px 12.5px;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: #ffd7cb;
+    border: none;
+    border-radius: 7.5px;
+    box-shadow: 0 4.5px #746f6a;
+  }
 
+  .smBtn:hover {
+    background-color: #3e8e41;
+  }
+
+  .smBtn:active {
+    background-color: yellow;
+    box-shadow: 0 5px #746f6a;
+    transform: translateY(2px);
+  }
+  .mdBtn {
+    padding: 11.25px 18.75px;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: #ffd7cb;
+    border: none;
+    border-radius: 11.25px;
+    box-shadow: 0 6.75px #746f6a;
+  }
+
+  .mdBtn:hover {
+    background-color: #3e8e41;
+  }
+
+  .mdBtn:active {
+    background-color: yellow;
+    box-shadow: 0 7.5px #746f6a;
+    transform: translateY(3px);
+  }
+  .lgBtn {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: #ffd7cb;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #746f6a;
+  }
+
+  .lgBtn:hover {
+    background-color: #3e8e41;
+  }
+
+  .lgBtn:active {
+    background-color: yellow;
+    box-shadow: 0 5px #746f6a;
+    transform: translateY(4px);
+  }
 // end Form
 
 // footer
@@ -358,4 +568,58 @@ input, select, textarea {
     background-color: white;
     display: none;
     overflow: hidden;
+  }
+
+/* Slideshow */ 
+.slideshow ul#slides {
+    list-style-type: none;
+    max-width: 650px;
+    max-height: 365px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+.slideshow img {
+    max-width: 100%;
+    height: auto;
+}
+.slideshow li.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+.slideshow li.showing {
+    opacity: 1;
+    z-index: 2;
+  }
+.slideshow .controller {
+    background-color: #333;
+    position: relative;
+    max-width: 650px;
+    width: 100%;
+    border-right: solid 4px #333;
+    border-left: solid 4px #333;
+    display: flex;
+    justify-content: center;
+  }
+.slideshow .controls {
+    font-size: 30px;
+    color: #fff;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  @include break(674px) {
+    .slideshow .controls {
+      border: none;
+    }
   }

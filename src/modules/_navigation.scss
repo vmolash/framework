@@ -75,6 +75,7 @@ header li#home {
     div {
         position: relative;
         padding-bottom: 1.3rem;
+        @include break(580px) { padding-bottom: 5rem; }
         input {
             position: absolute;
             top: 0;

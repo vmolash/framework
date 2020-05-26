@@ -55,7 +55,7 @@ h3 {
     }
     @include break(580px) {
         border-bottom: none;
-        border-right: solid 1px #ccc;
+        // border-right: solid 1px #ccc;
     }
     position: fixed;
     width: 100%;
@@ -69,7 +69,8 @@ h3 {
     left: 0;
     overflow-x: hidden;
     padding-top: 50px;
-    @include break(580px) { padding-top: 90px; }
+    // @include break(580px) { padding-top: 90px; }
+    @include break(580px) { padding-top: 287px; }
 }
 .mainDoc {
     @include break(580px) {
@@ -86,16 +87,23 @@ section {
 .mainDoc h2 {
     &#typography {
         padding-top: 13.5rem;
-        @include break(580px) { padding-top: 8.5rem; }
+        // @include break(580px) { padding-top: 8.5rem; }
+        @include break(580px) { padding-top: 31rem; }
     }
     &.anchor:before {
         content:"";
         display:block;
+        // height: 12rem; /* fixed header height*/
+        // margin: -12rem 0 0; /* negative fixed header height */
+        // @include break(580px) {
+        //     height: 85px; /* fixed header height*/
+        //     margin: -85px 0 0; /* negative fixed header height */
+        // }
         height: 12rem; /* fixed header height*/
         margin: -12rem 0 0; /* negative fixed header height */
         @include break(580px) {
-            height: 85px; /* fixed header height*/
-            margin: -85px 0 0; /* negative fixed header height */
+            height: 31rem; /* fixed header height*/
+            margin: -31rem 0 0; /* negative fixed header height */
         }
     }
     padding-bottom: 1rem;
@@ -106,12 +114,17 @@ html {
 }
 header.doc {
     display: block;
-    border-bottom: solid 1px #d4c9c5;
+    // border-bottom: solid 1px #d4c9c5;
     position: fixed;
     top: 0;
     z-index: 3;
     width: 100%;
-    a { display: inline-block; }
+    .jumbo {
+        display: none;
+        @include break(580px) {
+            display: flex;
+        }
+    }
 }
 footer {
     background-color: #ccc;

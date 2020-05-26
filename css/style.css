@@ -94,7 +94,6 @@ h3 {
 @media (min-width: 580px) {
   .panel {
     border-bottom: none;
-    border-right: solid 1px #ccc;
   }
 }
 
@@ -108,7 +107,7 @@ h3 {
 
 @media (min-width: 580px) {
   .panel {
-    padding-top: 90px;
+    padding-top: 287px;
   }
 }
 
@@ -140,7 +139,7 @@ section {
 
 @media (min-width: 580px) {
   .mainDoc h2#typography {
-    padding-top: 8.5rem;
+    padding-top: 31rem;
   }
 }
 
@@ -155,9 +154,9 @@ section {
 
 @media (min-width: 580px) {
   .mainDoc h2.anchor:before {
-    height: 85px;
+    height: 31rem;
     /* fixed header height*/
-    margin: -85px 0 0;
+    margin: -31rem 0 0;
     /* negative fixed header height */
   }
 }
@@ -169,15 +168,20 @@ html {
 
 header.doc {
   display: block;
-  border-bottom: solid 1px #d4c9c5;
   position: fixed;
   top: 0;
   z-index: 3;
   width: 100%;
 }
 
-header.doc a {
-  display: inline-block;
+header.doc .jumbo {
+  display: none;
+}
+
+@media (min-width: 580px) {
+  header.doc .jumbo {
+    display: flex;
+  }
 }
 
 footer {
@@ -394,6 +398,12 @@ header nav ul li a {
 .panel div {
   position: relative;
   padding-bottom: 1.3rem;
+}
+
+@media (min-width: 580px) {
+  .panel div {
+    padding-bottom: 5rem;
+  }
 }
 
 .panel div input {

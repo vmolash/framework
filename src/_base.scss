@@ -193,7 +193,9 @@ article {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    padding: 4rem 10rem;
+
+    padding: 2rem;
+    @include break(500px) { padding: 4rem 10rem; }
     h2, p {
         text-align: center;
     }
@@ -215,4 +217,16 @@ article {
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0; 
+    a, p {
+        text-align: left;
+    }
+    p { padding-left: 0; }
+    div { margin-left: 1.5rem; }
+
 }

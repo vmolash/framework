@@ -252,7 +252,13 @@ article {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  padding: 4rem 10rem;
+  padding: 2rem;
+}
+
+@media (min-width: 500px) {
+  .jumbo {
+    padding: 4rem 10rem;
+  }
 }
 
 .jumbo h2, .jumbo p {
@@ -283,6 +289,25 @@ article {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.center a, .center p {
+  text-align: left;
+}
+
+.center p {
+  padding-left: 0;
+}
+
+.center div {
+  margin-left: 1.5rem;
 }
 
 header {

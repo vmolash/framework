@@ -28,12 +28,16 @@ header {
   border-bottom: solid 1px #d4c9c5;
 }
 
-h2, h3 {
+h1, h2, h3 {
   margin-left: 1rem;
 }
 
 h2 {
   text-transform: uppercase;
+}
+
+h3 {
+  margin-bottom: .75rem;
 }
 
 .logo {
@@ -60,6 +64,18 @@ h2 {
 
 .panel a {
   text-transform: uppercase;
+}
+
+.panel ul {
+  margin-left: .8rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 580px) {
+  .panel ul {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 580px) {
@@ -102,14 +118,26 @@ section {
 }
 
 .mainDoc h2 {
-  padding-top: 135px;
   padding-bottom: 1rem;
 }
 
+.mainDoc h2#typography {
+  padding-top: 13.5rem;
+}
+
 @media (min-width: 580px) {
-  .mainDoc h2 {
-    padding-top: 85px;
+  .mainDoc h2#typography {
+    padding-top: 8.5rem;
   }
+}
+
+.mainDoc h2.anchor:before {
+  content: "";
+  display: block;
+  height: 85px;
+  /* fixed header height*/
+  margin: -85px 0 0;
+  /* negative fixed header height */
 }
 
 html {
@@ -127,6 +155,7 @@ header.doc {
 
 footer {
   background-color: #ccc;
+  z-index: 6;
 }
 
 @media (min-width: 580px) {
@@ -134,7 +163,6 @@ footer {
     display: block;
     position: fixed;
     bottom: 0;
-    z-index: 6;
     width: 100%;
   }
 }
@@ -184,6 +212,7 @@ figure {
 article {
   background-color: lightseagreen;
   border: solid 1px #dedede;
+  padding: .5rem;
   margin: .2rem;
 }
 
@@ -714,6 +743,10 @@ td, th {
 
 .striped tr:nth-of-type(even) {
   background: lightgoldenrodyellow;
+}
+
+table {
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 720px) {

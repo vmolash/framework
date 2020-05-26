@@ -10,11 +10,14 @@ main {
 header {
     border-bottom: solid 1px #d4c9c5;
 }
-h2, h3 {
+h1, h2, h3 {
     margin-left: 1rem;
 }
 h2 {
     text-transform: uppercase;
+}
+h3 {
+    margin-bottom: .75rem;
 }
 .logo {
     width: 80px;
@@ -29,6 +32,14 @@ h2 {
     background-color: $body-background;
     a {
         text-transform: uppercase;
+    }
+    ul {
+        margin-left: .8rem;
+        margin-top: 1.5rem;
+        @include break(580px) { 
+            margin-top: 0;
+            margin-left: 1rem;
+        }
     }
     @include break(580px) {
         border-bottom: none;
@@ -61,23 +72,50 @@ section {
 .full-height {
     height: 100vh;
 }
+
 // section, h2 {
 //     position: relative;
 //     // top: 20px;
 // }
+// .anchor:target {
+//     padding-top: 135px;
+//     @include break(580px) {
+//         padding-top: 85px;
+//     }
+// }
 .mainDoc h2 {
+    &#typography {
+        padding-top: 13.5rem;
+        @include break(580px) { padding-top: 8.5rem; }
+    }
+    &.anchor:before {
+        content:"";
+        display:block;
+        height: 85px; /* fixed header height*/
+        margin: -85px 0 0; /* negative fixed header height */
+    }
+    // scroll-margin-top: 13.5rem;
+    // margin-top: 7rem;
+    // @include break(580px) { scroll-margin-top: 8.5rem; }
+    
     // position: relative;
     // & span {
     //     position: absolute;
     //     top: -56px;
     // }
-    padding-top: 135px;
+    // &:target {
+    //     padding-top: 135px;
+    // }
+    // // padding-top: 135px;
     padding-bottom: 1rem;
     
-    @include break(580px) {
-        padding-top: 85px;
+    // @include break(580px) {
+    //     &:target {
+    //         padding-top: 85px;
+    //     }
+        // padding-top: 85px;
        
-    }
+    // }
     // height: 40px;
 }
 html {
@@ -94,12 +132,12 @@ header.doc {
 }
 footer {
     background-color: #ccc;
+    z-index: 6;
     &.fixedFooter {
         @include break(580px) {
             display: block;
             position: fixed;
             bottom: 0;
-            z-index: 6;
             width: 100%;
         }
     }
@@ -148,6 +186,7 @@ figure {
 article {
     background-color: lightseagreen;
     border: solid 1px #dedede;
+    padding: .5rem;
     margin: .2rem;
 }
 // end code box

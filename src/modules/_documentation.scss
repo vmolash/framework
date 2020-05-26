@@ -249,7 +249,9 @@ td, th {
 .striped tr:nth-of-type(even) {
     background: lightgoldenrodyellow;
 }
-
+table {
+    margin-bottom: 3rem;
+}
 @include break(720px) {
     table {
         border-collapse: collapse;

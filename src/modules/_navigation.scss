@@ -24,7 +24,6 @@ header {
         right: 8px;
         @include break(500px) { display: none; }
     }
-    
     nav {
         height: 0;
         overflow: hidden;
@@ -33,7 +32,7 @@ header {
             overflow: visible;
         }
         ul{
-            @include break(0, 630px) { .logo { display: none; } }
+            @include break(0, 499px) { .logo { display: none; } }
             li {
                 border-radius: 5px;
                 @include linx($nav-color, $nav-hover, $nav-hover);
@@ -58,7 +57,7 @@ header {
                         justify-content: center;
                         align-items: center;
                         width: 120px;
-                        height: 56px;
+                        height: 90px;
                         &.logo { padding: 0; }
                     }
                 }
@@ -66,7 +65,11 @@ header {
         }
     }
 } 
-
+header li#home {
+    @include break(500px) {
+        display: none;
+    }
+}
 // Docs navigation
 .panel {
     div {

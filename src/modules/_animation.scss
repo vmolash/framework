@@ -1,4 +1,4 @@
-.active { // panel active link with js
+.panel li a.active { // panel active link with js
     color:  $nav-hover;
     text-decoration: underline;
     transition: all 0.7s ease-in-out;

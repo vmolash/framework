@@ -611,7 +611,6 @@ header nav ul li a {
 
 .panel li a.active {
   color: #b77869;
-  text-decoration: underline;
   transition: all 0.7s ease-in-out;
 }
 

@@ -194,11 +194,11 @@ function searchDesktop() {
   
   
   
-  
+  // Acvive navigation links on Scroll
   const mainSections = document.querySelectorAll('section h2');
       const appearSections = {
         threshold: 0,
-        rootMargin: '0px 50px 0px 0px'
+        rootMargin: '0px 20px 0px 0px'
     };
       const activeOnScroll = new IntersectionObserver(function(entries, activeOnScroll){
         
@@ -213,7 +213,7 @@ function searchDesktop() {
               current[0].className = current[0].className.replace('active', '');
               link.classList.add('active');
               // link.classList.toggle('active');
-              activeOnScroll.unobserve(entry.target);
+              // activeOnScroll.unobserve(entry.target);
             }
         });
     }, appearSections);

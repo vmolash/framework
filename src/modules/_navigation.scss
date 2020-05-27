@@ -44,6 +44,7 @@ header {
                     font-weight: bold;
                     display: block;
                     padding: 12px 10px;
+                    text-align: center;
                     text-transform: uppercase;
                 }
             } 
@@ -57,7 +58,7 @@ header {
                         justify-content: center;
                         align-items: center;
                         width: 120px;
-                        height: 90px;
+                        height: 60px;
                         &.logo { padding: 0; }
                     }
                 }
@@ -117,6 +118,12 @@ header li#home {
 }
 .panel li {
     margin: .5rem 1rem;
+    a {
+        color: #000;
+        &:hover {
+            color: #d4c9c5;
+        }
+    }
 }
 .searchBox.activeSearch {
     height: auto;

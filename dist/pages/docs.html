@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bubble Code Framework | Docs</title>
+    <title>Bauble Code Framework | Docs</title>
     <link rel="stylesheet" href="../css/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script
@@ -17,7 +17,7 @@
         <div>
             <input type="checkbox" id="toggle">
             <label for="toggle">Menu</label>
-            <nav class="nav">
+            <nav class="nav container">
                 <ul>
                     <li><a href="../index.html" class="logo"><img src="../images/baubleCodeLogo.png" alt=""></a></li>
                     <li id="home"><a href="../index.html" class="nav-item">Home</a></li>
@@ -801,7 +801,7 @@
                             <label for="toggleBar">Menu</label>
                             <nav class="nav">
                                 <ul>
-                                    <li><a href="#toggleBar" class="logo"><img src="../images/logo.png" alt="logo"></a></li>
+                                    <li><a href="#toggleBar" class="logo"><img src="../images/baubleCodeLogo.png" alt="logo"></a></li>
                                     <li><a href="#toggleBar" class="nav-item">Shop</a></li>
                                     <li><a href="#toggleBar" class="nav-item">About</a></li>
                                     <li><a href="#toggleBar" class="nav-item">Contact</a></li>
@@ -924,40 +924,64 @@
                     <h2 id="slideshow" class="anchor">SLIDESHOW</h2>
                     <p>A photo slideshow, applicable though CSS and JS, will enable the buyer to scroll through photos without having to scroll down throughout the page. This is one useful way of displaying merchandise to potential buyers. Simple add class="slideshow" to the container where you want to input slideshow. The CSS and JS code is here:</p>
                     <div class="slideshow">
-                        <div class="controller">
-                            <button class="controls" id="prev"><i class="fas fa-chevron-circle-left"></i></button>
-                                
-                            <button class="controls" id="pause"><i class="fas fa-pause-circle"></i></button>
-                                
-                            <button class="controls" id="next"><i class="fas fa-chevron-circle-right"></i></button>
+                        <div class="mySlides fade">
+                            <img src="../images/slide_01.jpg">
+                            <div class="text">Caption One</div>
                         </div>
-                        <ul id="slides">
-                            <li class="slide showing"><img src="../images/jewelry01.jpg" alt="jewelry"></li>
-                            <li class="slide"><img src="../images/jewelry02.jpg" alt="jewelry"></li>
-                            <li class="slide"><img src="../images/jewelry03.jpg" alt="jewelry"></li>
-                            <li class="slide"><img src="../images/jewelry04.jpg" alt="jewelry"></li>
-                            <li class="slide"><img src="../images/jewelry05.jpg" alt="jewelry"></li>
-                            <li class="slide"><img src="../images/jewelry06.jpg" alt="jewelry"></li>
-                        </ul>
+                            
+                        <div class="mySlides fade">
+                            <img src="../images/slide_02.jpg">
+                            <div class="text">Caption Two</div>
+                        </div>
+                            
+                        <div class="mySlides fade">
+                            <img src="../images/slide_03.jpg">
+                            <div class="text">Caption Three</div>
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <img src="../images/slide_04.jpg">
+                            <div class="text">Caption Three</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <img src="../images/slide_05.jpg">
+                            <div class="text">Caption Four</div>
+                        </div>  
+                         
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>  
                     </div>
 <figure>
 <pre><code>
 &lt;div class="slideshow"&gt;
-    &lt;div class="controller"&gt;
-        &lt;button class="controls" id="prev"&gt;&lt;i class="fas fa-chevron-circle-left"&gt;&lt;/i&gt;&lt;/button&gt;
-            
-        &lt;button class="controls" id="pause"&gt;&lt;i class="fas fa-pause-circle"&gt;&lt;/i&gt;&lt;/button&gt;
-            
-        &lt;button class="controls" id="next"&gt;&lt;i class="fas fa-chevron-circle-right"&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div class="mySlides fade"&gt;
+        &lt;img src="../images/jewelry01.jpg"&gt;
+        &lt;div class="text"&gt;Caption Text&lt;/div&gt;
     &lt;/div&gt;
-    &lt;ul id="slides"&gt;
-        &lt;li class="slide showing"&gt;&lt;img src="../images/jewelry01.jpg" alt="jewelry"&gt;&lt;/li&gt;
-        &lt;li class="slide"&gt;&lt;img src="../images/jewelry02.jpg" alt="jewelry"&gt;&lt;/li&gt;
-        &lt;li class="slide"&gt;&lt;img src="../images/jewelry03.jpg" alt="jewelry"&gt;&lt;/li&gt;
-        &lt;li class="slide"&gt;&lt;img src="../images/jewelry04.jpg" alt="jewelry"&gt;&lt;/li&gt;
-        &lt;li class="slide"&gt;&lt;img src="../images/jewelry05.jpg" alt="jewelry"&gt;&lt;/li&gt;
-        &lt;li class="slide"&gt;&lt;img src="../images/jewelry06.jpg" alt="jewelry"&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+        
+    &lt;div class="mySlides fade"&gt;
+        &lt;img src="../images/jewelry02.jpg"&gt;
+        &lt;div class="text"&gt;Caption Two&lt;/div&gt;
+    &lt;/div&gt;
+            
+    &lt;div class="mySlides fade"&gt;
+        &lt;img src="../images/jewelry03.jpg"&gt;
+        &lt;div class="text"&gt;Caption Three&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="mySlides fade"&gt;
+        &lt;img src="../images/jewelry04.jpg"&gt;
+        &lt;div class="text"&gt;Caption Three&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="mySlides fade"&gt;
+        &lt;img src="../images/jewelry05.jpg"&gt;
+        &lt;div class="text"&gt;Caption Three&lt;/div&gt;
+    &lt;/div&gt;    
+        
+    &lt;a class="prev" onclick="plusSlides(-1)"&gt;&#10094;&lt;/a&gt;
+    &lt;a class="next" onclick="plusSlides(1)"&gt;&#10095;&lt;/a&gt;  
 &lt;/div&gt;
 </code></pre>
 </figure>
@@ -967,7 +991,7 @@
     </main>
     <footer class="fixedFooter">
         <div class="container">
-            <p>Copyright &copy; 2020 - Bubble Code</p>
+            <p>Copyright &copy; 2020 - Bauble Code</p>
         </div>
     </footer>
 

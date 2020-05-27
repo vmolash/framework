@@ -161,72 +161,27 @@ document.addEventListener("click", closeAllSelect);
 
 
 // SLIDESHOW
-    var slides = document.querySelectorAll('#slides .slide');
-    console.log(slides);
-    var currentSlide = 0;
-    var slideTimer = setInterval(nextSlide, 2000);
+var slideIndex = 1;
+showSlides(slideIndex);
 
-    function autoSlide(n) {
-      slides[currentSlide].className = 'slide';
-      currentSlide = (n+slides.length)%slides.length; // 1%6 = 1, 2%6 = 2 ... 6%6=0
-      console.log(currentSlide);
-      slides[currentSlide].className = 'slide showing';
-    }
-    // pause button
-    var playing = true;
-    var pauseBtn = document.getElementById('pause');
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-    function pauseSS() {
-        
-        pauseBtn.innerHTML = '<i class="fas fa-play-circle"></i>';
-        
-        playing = false;
-        clearInterval(slideTimer);
-        console.log(playing,'it is paused');
-    } // play button
-    function playSS() {
-       
-        pauseBtn.innerHTML = '<i class="fas fa-pause-circle"></i>';
-        playing = true;
-        slideTimer = setInterval(nextSlide, 2000);
-        console.log(playing, 'it is playing');
-    }
-    // add even to pause/play
-    pauseBtn.addEventListener('click', function(){
-        console.log('pauseBtn');
-        if(playing) {
-            pauseSS();
-        } else {
-            playSS();
-        } 
-        });
-    // next/prev slides
-    function nextSlide () {
-        // increase count of slide array by 1
-        autoSlide(currentSlide+1);
-        
-        
-    }
-    function prevSlide() {
-        // decrease count of slide array by 1
-       
-       autoSlide(currentSlide-1);
-       
-    }
- // reference next and prev buttons
-    var nextBtn = document.getElementById('next');
-    var prevBtn = document.getElementById('prev');
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-    // add event listener to listen for click
-    nextBtn.addEventListener('click', function(){
-        pauseSS();
-        nextSlide();
-    });
-    prevBtn.addEventListener('click', function(){
-        pauseSS();
-        prevSlide();
-    } );
-
+function showSlides(n) {
+  var slides = document.getElementsByClassName("mySlides");
+  
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
 // END SLIDESHOW
 
 

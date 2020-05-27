@@ -197,7 +197,7 @@ header.doc .jumbo {
 }
 
 footer {
-  background-color: #ccc;
+  background-color: #D5C9C6;
   z-index: 6;
 }
 
@@ -1191,75 +1191,67 @@ input, select, textarea {
   color: white;
 }
 
-.smBtn {
-  padding: 7.5px 12.5px;
-  font-size: 12px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: black;
-  background-color: #ffd7cb;
-  border: none;
+.xsBtn {
+  padding: 4.5px;
+  font-size: 11px;
   border-radius: 7.5px;
   box-shadow: 0 4.5px #746f6a;
 }
 
-.smBtn:hover {
-  color: #fff;
-  background-color: purple;
-}
-
-.smBtn:active {
-  background-color: yellow;
-  box-shadow: 0 5px #746f6a;
-  transform: translateY(2px);
+.smBtn {
+  padding: 7.5px 15.5px;
+  font-size: 12px;
+  border-radius: 8.5px;
+  box-shadow: 0 5.5px #746f6a;
 }
 
 .mdBtn {
   padding: 11.25px 18.75px;
   font-size: 13px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: black;
-  background-color: #ffd7cb;
-  border: none;
   border-radius: 11.25px;
   box-shadow: 0 6.75px #746f6a;
-}
-
-.mdBtn:hover {
-  color: #fff;
-  background-color: purple;
-}
-
-.mdBtn:active {
-  background-color: yellow;
-  box-shadow: 0 7.5px #746f6a;
-  transform: translateY(3px);
 }
 
 .lgBtn {
   padding: 15px 25px;
   font-size: 24px;
+  border-radius: 15px;
+  box-shadow: 0 9px #746f6a;
+}
+
+.xsBtn, .smBtn, .mdBtn, .lgBtn {
   text-align: center;
   cursor: pointer;
   outline: none;
   color: black;
   background-color: #ffd7cb;
   border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #746f6a;
 }
 
-.lgBtn:hover {
+.xsBtn:hover, .smBtn:hover, .mdBtn:hover, .lgBtn:hover {
   color: #fff;
   background-color: purple;
 }
 
-.lgBtn:active {
+.xsBtn:active, .smBtn:active, .mdBtn:active, .lgBtn:active {
   background-color: yellow;
   box-shadow: 0 5px #746f6a;
+  color: #000;
+}
+
+.xsBtn:active {
+  transform: translateY(2px);
+}
+
+.smBtn:active {
+  transform: translateY(3px);
+}
+
+.mdBtn:active {
+  transform: translateY(3.5px);
+}
+
+.lgBtn:active {
   transform: translateY(4px);
 }
 

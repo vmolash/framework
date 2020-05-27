@@ -1,6 +1,8 @@
 li = document.getElementsByClassName("panel-item");
   console.log(li);
-  
+
+$(document).ready(function() {
+  $('#myInput').keyup(myFunction);
   function myFunction() {
       var input, filter, ul, li, a, i, txtValue;
       input = document.getElementById("myInput");
@@ -18,7 +20,9 @@ li = document.getElementsByClassName("panel-item");
           }
       }
   }
-$(document).ready(function() {
+
+
+
   $(window).resize(function () {
     searchDesktop();
 });
@@ -27,7 +31,7 @@ $(window).resize(function() {
 });
 searchDesktop();
 searchMobile();
-$('#myInput').keyup(searchMobile());
+
 function searchMobile() {
     if( $(window).width() <= 580 ) {
         console.log(window.screen.width);
@@ -59,8 +63,8 @@ function searchDesktop() {
             }
         });
     }
-}
- });
+  }
+});
   
   // searchMobile();
   // searchDesktop();

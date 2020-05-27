@@ -21,9 +21,7 @@ $(document).ready(function() {
       }
   }
 
-
-
-  $(window).resize(function () {
+$(window).resize(function () {
     searchDesktop();
 });
 $(window).resize(function() {
@@ -197,29 +195,29 @@ function searchDesktop() {
   
   
   
-  // const mainSections = document.querySelectorAll('section h2');
-  //     const appearSections = {
-  //       threshold: 0,
-  //       rootMargin: '0px 0px 0px 0px'
-  //   };
-  
-    
-  //     const activeOnScroll = new IntersectionObserver(function(entries, activeOnScroll){
+  const mainSections = document.querySelectorAll('section h2');
+      const appearSections = {
+        threshold: 0,
+        rootMargin: '0px 50px 0px 0px'
+    };
+      const activeOnScroll = new IntersectionObserver(function(entries, activeOnScroll){
         
-  //       entries.forEach(entry => {
-  //         let id = entry.target.id;
-  //         let link = document.querySelector('[href="#'+id+'"');
-  //           if(!entry.isIntersecting) { // if not true
-  //               return;
-  //           } else {
-  //             let current = document.getElementsByClassName('active');
-  //             current[0].className = current[0].className.replace(' active', '');
-  //             link.classList.add('active');
-  //             activeOnScroll.unobserve(entry.target);
-  //           }
-  //       });
-  //   }, appearSections);
+        entries.forEach(entry => {
+          let id = entry.target.id;
+          let link = document.querySelector('.panel [href="#'+id+'"');
+            if(!entry.isIntersecting) { // if not true
+                return;
+            } else {
+              let current = document.getElementsByClassName('active');
+              console.log(current);
+              current[0].className = current[0].className.replace('active', '');
+              link.classList.add('active');
+              // link.classList.toggle('active');
+              activeOnScroll.unobserve(entry.target);
+            }
+        });
+    }, appearSections);
     
-  //   mainSections.forEach(section => {
-  //     activeOnScroll.observe(section);
-  //   })
+    mainSections.forEach(section => {
+      activeOnScroll.observe(section);
+    })

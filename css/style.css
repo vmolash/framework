@@ -609,7 +609,7 @@ header nav ul li a {
   padding: .5rem;
 }
 
-.active {
+.panel li a.active {
   color: #b77869;
   text-decoration: underline;
   transition: all 0.7s ease-in-out;

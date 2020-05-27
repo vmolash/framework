@@ -85,7 +85,8 @@ section {
     margin: 0 1.5rem 7rem;
 }
 .full-height {
-    height: 100vh;
+    margin-bottom: 2rem;
+    @include break(1200px) { height: 100vh; }
 }
 .mainDoc h2 {
     &#typography {
@@ -131,6 +132,7 @@ footer {
             display: block;
             position: fixed;
             bottom: 0;
+            left: 0;
             width: 100%;
         }
     }
@@ -227,4 +229,7 @@ article {
 }
 #slideshow figure {
     margin-bottom: 5rem;
+}
+.full-height .slideshow {
+    margin-left: 0;
 }

@@ -253,6 +253,10 @@ figure {
   padding: 1.4rem;
 }
 
+.full-height figure {
+  margin-bottom: 5rem;
+}
+
 article {
   background-color: lightseagreen;
   border: solid 1px #dedede;
@@ -329,6 +333,70 @@ article {
 
 .full-height .slideshow {
   margin-left: 0;
+}
+
+.demo {
+  margin: 5rem;
+  display: grid;
+  justify-content: center;
+  grid-gap: 4rem 2rem;
+}
+
+@media (min-width: 530px) {
+  .demo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 740px) {
+  .demo {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.demo .example {
+  border: solid 1px #ccc;
+  padding: 2rem;
+}
+
+.demo .demo-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo .demo-top a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.demo .demo-top a:hover {
+  color: #b77869;
+}
+
+.demo .demo-bottom {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.demo .demo-bottom div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.demo .demo-bottom div button {
+  padding: 6px 12px;
+  color: #fff;
+  width: 9rem;
+}
+
+.demo .demo-bottom div button.github {
+  background-color: #7c7472;
+}
+
+.demo .demo-bottom div button.online {
+  background-color: #e3c593;
 }
 
 header {
@@ -488,7 +556,7 @@ header nav ul li a {
   /* IE 10+ */
   user-select: none;
   position: relative;
-  top: 2px;
+  top: 7px;
   right: 8px;
 }
 
@@ -528,7 +596,6 @@ header nav ul li a {
 }
 
 #myInput {
-  border-radius: 4px;
   padding: .5rem;
 }
 

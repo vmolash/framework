@@ -103,7 +103,7 @@ header li#home {
         @include browsers; // include mixin browsers
         user-select: none;
         position: relative;
-        top: 2px;
+        top: 7px;
         right: 8px;
         @include break(580px) { display: none; }
     }
@@ -130,6 +130,5 @@ header li#home {
     overflow: hidden;
 }
 #myInput {
-    border-radius: 4px;
     padding: .5rem;
 }

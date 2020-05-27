@@ -335,6 +335,16 @@ article {
   margin-left: 0;
 }
 
+.download {
+  color: #000;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.download:hover {
+  color: #b77869;
+}
+
 .demo {
   margin: 5rem;
   display: grid;
@@ -365,15 +375,6 @@ article {
   align-items: center;
 }
 
-.demo .demo-top a {
-  color: #000;
-  text-decoration: underline;
-}
-
-.demo .demo-top a:hover {
-  color: #b77869;
-}
-
 .demo .demo-bottom {
   display: flex;
   flex-direction: column;
@@ -389,14 +390,23 @@ article {
   padding: 6px 12px;
   color: #fff;
   width: 9rem;
+  cursor: pointer;
 }
 
 .demo .demo-bottom div button.github {
   background-color: #7c7472;
 }
 
+.demo .demo-bottom div button.github:hover {
+  background-color: #5e5654;
+}
+
 .demo .demo-bottom div button.online {
   background-color: #e3c593;
+}
+
+.demo .demo-bottom div button.online:hover {
+  background-color: #bba06f;
 }
 
 header {

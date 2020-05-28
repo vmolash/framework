@@ -65,7 +65,8 @@ header {
             }
         }
     }
-} 
+}
+
 header li#home {
     @include break(500px) {
         display: none;

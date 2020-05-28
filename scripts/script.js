@@ -33,6 +33,10 @@ searchMobile();
 function searchMobile() {
     if( $(window).width() <= 580 ) {
         console.log(window.screen.width);
+        $('#myInput').click(function() {
+          $('.panel nav').addClass('activeSearch'); 
+          $('.panel label').css("backgroundImage", "url(../images/close.png");
+        });
         $('#myInput').keyup(function() {
             console.log('hi keyup');
             $('.panel nav').addClass('activeSearch'); 
@@ -40,10 +44,13 @@ function searchMobile() {
         });
         $('.panel label').click(function() {
             console.log('hi there');
-            $('.panel nav').toggleClass('activeSearch');
+            // $('.panel nav').toggleClass('activeSearch');
+            $('.panel nav').removeClass('activeSearch');
+            $('.panel label').css("backgroundImage", "url(../images/search.png");
         })
         $('.panel nav').click(function() {
             $('.panel nav').removeClass('activeSearch');
+            $('.panel label').css("backgroundImage", "url(../images/search.png");
             $('#myInput').val("");
             for(let i=0; i<li.length; i++) {
                 li[i].style.display = "";

@@ -70,6 +70,7 @@ h3 {
 
 .logo span {
   font-family: ‘Allura’, cursive;
+  font-weight: 400;
   color: #000;
   text-transform: capitalize;
   margin-left: 1.5rem;
@@ -423,6 +424,7 @@ article {
 }
 
 .demo .demo-bottom div button {
+  outline: none;
   padding: 6px 12px;
   color: #fff;
   width: 9rem;

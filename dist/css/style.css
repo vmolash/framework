@@ -1271,9 +1271,8 @@ input, select, textarea {
 }
 
 .xsBtn:active, .smBtn:active, .mdBtn:active, .lgBtn:active {
-  background-color: yellow;
+  background-color: #2E3E60;
   box-shadow: 0 5px #746f6a;
-  color: #000;
 }
 
 .xsBtn:active {

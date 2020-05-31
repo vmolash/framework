@@ -387,28 +387,28 @@
 <figure>
 <pre>
 <code>
-&lt;form action="">
-    &lt;h3&gt;Contact Form&lt;/h3&gt;
-    &lt;label for="name" &gt;Name:&lt;/label&gt;
-    &lt;input type="text" name="name" id="name" placeholder="Name&#42;" required&gt;
+&lt;form class="contact-form"&gt;
+    &lt;label for="Name"&gt;&lt;/label&gt;
+    &lt;input type="text" id="Name" name="name" placeholder="Name:"&gt;
     
-    &lt;label for="email"&gt;Email&lt;/label&gt;
-    &lt;input type="email" name="email" id="email" placeholder="Email&#42;" required&gt;
-
-    &lt;label for="subject"&gt;Subject:&lt;/label&gt;
-    &lt;select name="subject" id="subject"&gt;
-    &lt;option value="-- select --"&gt;-- Select subject--&lt;/option&gt;
-    &lt;option value="Claim"&gt;Claim&lt;/option&gt;
-    &lt;option value="review"&gt;Review&lt;/option&gt;
-    &lt;option value="partnership"&gt;Partnership&lt;/option&gt;
-    &lt;option value="other"&gt;Other&lt;/option&gt;
-    &lt;/select&gt;
+    &lt;label for="email"&gt;&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" placeholder="Email:" required&gt;
+            
+            
+    &lt;div class="custom-select"&gt;
+        &lt;label for="subject"&gt;&lt;/label&gt;
+        &lt;select name="subject" id="subject"&gt;
+            &lt;option value="null" disabled selected&gt;Choose your subject&lt;/option&gt;
+            &lt;option value="Customer"&gt;Customer Service&lt;/option&gt;
+            &lt;option value="Myorder"&gt;My order&lt;/option&gt;
+            &lt;option value="Other"&gt;Other&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+            
+    &lt;label for="txt"&gt;&lt;/label&gt;
+    &lt;textarea name="message" id="txt" placeholder="Message:"&gt;&lt;/textarea&gt;
     
-    &lt;label for="message"&gt;Message:&lt;/label&gt;
-    &lt;textarea name="message" id="message" placeholder="Message&#42;" required&gt;&lt;/textarea&gt;
-
-    &lt;button type="reset"&gt;Reset&lt;/button&gt;
-    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;input type="submit" id="buttonSend" value="SEND"&gt;
 &lt;/form&gt;
 </code>
 </pre>

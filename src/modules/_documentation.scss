@@ -402,6 +402,7 @@ table {
   .select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
   }
+// end Form
 /*! Contact Form */
 input, select, textarea {
     border: solid 1px rgb(232, 231, 231);
@@ -498,9 +499,8 @@ input, select, textarea {
     background-color: purple;
 }
 .xsBtn:active, .smBtn:active, .mdBtn:active, .lgBtn:active {
-    background-color: yellow;
+    background-color:  #2E3E60;
     box-shadow: 0 5px #746f6a;
-    color: #000;
 }
 .xsBtn:active {
     transform: translateY(2px);
@@ -514,8 +514,6 @@ input, select, textarea {
 .lgBtn:active {
     transform: translateY(4px);
 }
-
-// end Form
 
 // footer
 .footer {

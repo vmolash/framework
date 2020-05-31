@@ -25,9 +25,11 @@ header {
         @include break(500px) { display: none; }
     }
     nav {
+        background-color: #ffebe5;
         height: 0;
         overflow: hidden;
         @include break(500px) {
+            background-color: inherit;
             height: 100%;
             overflow: visible;
         }

@@ -487,12 +487,14 @@ header label {
 }
 
 header nav {
+  background-color: #ffebe5;
   height: 0;
   overflow: hidden;
 }
 
 @media (min-width: 500px) {
   header nav {
+    background-color: inherit;
     height: 100%;
     overflow: visible;
   }

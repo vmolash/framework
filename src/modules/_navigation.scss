@@ -17,7 +17,7 @@ header {
         text-indent: -999em;
         height: 56px;
         cursor: pointer;
-        @include browsers; // include mixin browsers
+        @include browsers;
         user-select: none;
         position: relative;
         top: 2px;
@@ -39,7 +39,6 @@ header {
                 border-radius: 5px;
                 @include linx($nav-color, $nav-hover, $nav-hover);
                 &:hover {
-                    // background-color: transparentize(lighten($background-hover, 4%), .2); //bult-in function: color
                     &:first-of-type { background-color: transparent; }
                 }
                 a { 

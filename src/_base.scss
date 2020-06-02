@@ -283,8 +283,10 @@ article {
     .demo-bottom {
         display: flex;
         flex-direction: column;
-        align-items: center;
         align-content: center;
+        img {
+            align-items: center;
+        }
         div {
             display: flex;
             justify-content: space-between;

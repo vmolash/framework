@@ -1,0 +1,59 @@
+// FONT
+html {
+    font-size: 10px;
+}
+.m-1 {
+    margin: 1rem;
+}
+p, input, select, button, textarea, div {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+p {
+    padding: .5rem 1rem;
+}
+.h-large {
+    font-size: 2.5rem;
+}
+.h-med {
+    font-size: 2rem;
+}
+.h-sm {
+    font-size: 1.5rem;
+}
+.t-large {
+    font-size: 1.8rem;
+}
+.t-med {
+    font-size: 1.4rem;
+}
+.t-sm {
+    font-size: 1.2rem;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}
+.bold {
+    font-weight: bold;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.t-right {
+    text-align: right;
+}
+.t-left {
+    text-align: left;
+}
+.t-center {
+    text-align: center;
+}

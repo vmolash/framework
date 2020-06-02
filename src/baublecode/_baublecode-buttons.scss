@@ -1,0 +1,52 @@
+.xsBtn {
+    padding: 4.5px;
+    font-size: 11px;
+    border-radius: 7.5px;
+    box-shadow: 0 4.5px $box-shadow;
+}
+.smBtn {
+    padding: 7.5px 15.5px;
+    font-size: 12px;
+    border-radius: 8.5px;
+    box-shadow: 0 5.5px $box-shadow;
+}
+.mdBtn {
+    padding: 11.25px 18.75px;
+    font-size: 13px;
+    border-radius: 11.25px;
+    box-shadow: 0 6.75px $box-shadow;
+}
+.lgBtn {
+    padding: 15px 25px;
+    font-size: 24px;
+    border-radius: 15px;
+    box-shadow: 0 9px $box-shadow;
+  }
+.xsBtn, .smBtn, .mdBtn, .lgBtn {
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: $text-shadow;
+    background-color: $btn;
+    border: none;
+}
+.xsBtn:hover, .smBtn:hover, .mdBtn:hover, .lgBtn:hover {
+    color: $text-color;
+    background-color: $btn-hover;
+}
+.xsBtn:active, .smBtn:active, .mdBtn:active, .lgBtn:active {
+    background-color: $btn-active;
+    box-shadow: 0 5px $box-shadow
+}
+.xsBtn:active {
+    transform: translateY(2px);
+}
+.smBtn:active { 
+    transform: translateY(3px);
+}
+.mdBtn:active {
+    transform: translateY(3.5px);
+  }
+.lgBtn:active {
+    transform: translateY(4px);
+}

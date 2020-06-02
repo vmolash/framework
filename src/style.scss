@@ -6,4 +6,16 @@
 
 @import "modules/navigation";
 @import "modules/animation";
-@import "modules/documentation";
+
+@import "baublecode/baublecode-font";
+@import "baublecode/baublecode-color";
+@import "baublecode/baublecode-grid";
+@import "baublecode/baublecode-image.scss";
+@import "baublecode/baublecode-helpers.scss";
+@import "baublecode/baublecode-table";
+@import "baublecode/baublecode-navbar";
+@import "baublecode/baublecode-jumbotron";
+@import "baublecode/baublecode-form";
+@import "baublecode/baublecode-buttons";
+@import "baublecode/baublecode-accordion";
+@import "baublecode/baublecode-slideshow";

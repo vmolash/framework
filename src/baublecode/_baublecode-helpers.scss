@@ -1,0 +1,19 @@
+// Helper classes
+.float-left {
+    float: left;
+    margin-right: .8rem;
+}
+.float-right {
+    float: right;
+    margin-left: .8rem;
+}
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+@media print {
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}

@@ -25,7 +25,7 @@ header {
         @include break(500px) { display: none; }
     }
     nav {
-        background-color: #ffebe5;
+        background-color: $bg-nav;
         height: 0;
         overflow: hidden;
         @include break(500px) {
@@ -121,9 +121,9 @@ header li#home {
 .panel li {
     margin: .5rem 1rem;
     a {
-        color: #000;
+        color: $text-shadow;
         &:hover {
-            color: #d4c9c5;
+            color: $nav-color;
         }
     }
 }

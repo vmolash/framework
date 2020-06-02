@@ -1,0 +1,11 @@
+/*! Image */
+.image {
+    background-color: $text-card;
+    margin: 1.2rem 0;
+    padding: 1.4rem;
+    border-radius: 4px;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}

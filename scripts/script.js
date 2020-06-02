@@ -1,4 +1,4 @@
-li = document.getElementsByClassName("panel-item");
+var li = document.getElementsByClassName("panel-item");
   console.log(li);
 
 $(document).ready(function() {
@@ -196,10 +196,6 @@ function searchDesktop() {
     slides[slideIndex-1].style.display = "block";  
   }
   // END SLIDESHOW
-  
-  
-  
-  
   
   // Acvive navigation links on Scroll
   const mainSections = document.querySelectorAll('section h2');

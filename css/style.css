@@ -836,7 +836,6 @@ p {
   .gr-half {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
   }
 }
 
@@ -844,7 +843,6 @@ p {
   .gr-third {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
   }
 }
 
@@ -852,7 +850,6 @@ p {
   .gr-fourth {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
   }
 }
 
@@ -860,7 +857,6 @@ p {
   .gr-fifth {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr;
   }
 }
 

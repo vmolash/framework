@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 * {
   margin: 0;
@@ -64,7 +63,7 @@ h3 {
 }
 
 .logo span {
-  font-family: ‘Allura’, cursive;
+  font-family: "Allura", cursive;
   font-weight: 400;
   color: #000;
   text-transform: capitalize;
@@ -334,14 +333,15 @@ article {
   margin-bottom: 5rem;
 }
 
-.centerLoad button {
+.centerLoad a {
+  color: #000;
   padding: 12px 28px;
   border-radius: 4px;
   background-color: #f9a07f;
   cursor: pointer;
 }
 
-.centerLoad button:hover {
+.centerLoad a:hover {
   background-color: #EF8056;
 }
 
@@ -428,27 +428,26 @@ article {
   justify-content: space-between;
 }
 
-.demo .demo-bottom div button {
-  outline: none;
+.demo .demo-bottom div a {
   padding: 6px 12px;
   color: #fff;
   width: 9rem;
   cursor: pointer;
 }
 
-.demo .demo-bottom div button.github {
+.demo .demo-bottom div a.github {
   background-color: #7c7472;
 }
 
-.demo .demo-bottom div button.github:hover {
+.demo .demo-bottom div a.github:hover {
   background-color: #5e5654;
 }
 
-.demo .demo-bottom div button.online {
+.demo .demo-bottom div a.online {
   background-color: #e3c593;
 }
 
-.demo .demo-bottom div button.online:hover {
+.demo .demo-bottom div a.online:hover {
   background-color: #bba06f;
 }
 
@@ -833,20 +832,34 @@ p {
   grid-template-rows: 1fr;
 }
 
-@media (min-width: 579px) {
+@media (min-width: 520px) {
   .gr-half {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
   }
+}
+
+@media (min-width: 640px) {
   .gr-third {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
+}
+
+@media (min-width: 768px) {
   .gr-fourth {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gr-fifth {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
   }
 }

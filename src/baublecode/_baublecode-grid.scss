@@ -4,48 +4,27 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
-// @include break(579px) {
-//     .gr-half {
-//         display: grid;
-//         grid-template-columns: repeat(2, 1fr);
-//         grid-template-rows: 1fr;
-//     }
-//     .gr-third {
-//         display: grid;
-//         grid-template-columns: repeat(3, 1fr);
-//         grid-template-rows: 1fr;
-//     }
-//     .gr-fourth {
-//         display: grid;
-//         grid-template-columns: repeat(4, 1fr);
-//         grid-template-rows: 1fr;
-//     }
-// }
 @include  break(520px) {
     .gr-half {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
     }
 }
 @include  break(640px) {
     .gr-third {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
     }
 }
 @include  break(768px) {
     .gr-fourth {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
     }
 }
 @include  break(1024px) {
     .gr-fifth {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: 1fr;
     }
 }

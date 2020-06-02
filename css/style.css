@@ -416,6 +416,7 @@ article {
 .demo .demo-bottom {
   display: flex;
   flex-direction: column;
+  align-items: center;
   align-content: center;
 }
 

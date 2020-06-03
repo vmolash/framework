@@ -10,7 +10,7 @@ $(document).ready(function() {
       filter = input.value.toUpperCase().replace(/\s/g, '');
       ul = document.getElementById("myUL");
       li = ul.getElementsByTagName("li");
-      for (let i = 0; i < li.length; i++) {
+      for (let i = 0; i<li.length; i++) {
           a = li[i].getElementsByTagName("a")[0];
           txtValue = a.textContent || a.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {

@@ -1292,7 +1292,7 @@ input, select, textarea {
 
 .xsBtn:hover, .smBtn:hover, .mdBtn:hover, .lgBtn:hover {
   color: #fff;
-  background-color: purple;
+  background-color: #f3a079;
 }
 
 .xsBtn:active, .smBtn:active, .mdBtn:active, .lgBtn:active {

@@ -35,7 +35,7 @@
     background-color: $btn-hover;
 }
 .xsBtn:active, .smBtn:active, .mdBtn:active, .lgBtn:active {
-    background-color: $btn-active;
+    background-color: $btn-hover;
     box-shadow: 0 5px $box-shadow
 }
 .xsBtn:active {

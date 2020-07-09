@@ -739,12 +739,24 @@ p {
   text-align: center;
 }
 
-.t-green {
-  color: #128212;
+.t-white {
+  color: #fff;
+}
+
+.t-gray {
+  color: #545050;
+}
+
+.t-pinkgray {
+  color: #a7a4a4;
 }
 
 .t-yellow {
   color: #dada13;
+}
+
+.t-green {
+  color: #128212;
 }
 
 .t-orange {
@@ -761,18 +773,6 @@ p {
 
 .t-purple {
   color: #6f146f;
-}
-
-.t-gray {
-  color: #545050;
-}
-
-.t-pinkgray {
-  color: #a7a4a4;
-}
-
-.t-white {
-  color: #fff;
 }
 
 .bg-darkgray {

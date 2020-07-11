@@ -10,7 +10,7 @@
               }
     } 
   }
-  @mixin linx ($link, $hover, $active) { // custom mixin
+  @mixin linx ($link, $hover, $active) {
     a {
       color: $link;
       &:hover {

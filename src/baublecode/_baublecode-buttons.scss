@@ -23,12 +23,12 @@
     box-shadow: 0 9px $box-shadow;
   }
 .xsBtn, .smBtn, .mdBtn, .lgBtn {
+    background-color: $btn;
+    border: none;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: $text-shadow;
-    background-color: $btn;
-    border: none;
 }
 .xsBtn:hover, .smBtn:hover, .mdBtn:hover, .lgBtn:hover {
     color: $text-color;

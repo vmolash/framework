@@ -1282,12 +1282,12 @@ input, select, textarea {
 }
 
 .xsBtn, .smBtn, .mdBtn, .lgBtn {
+  background-color: #ffd7cb;
+  border: none;
   text-align: center;
   cursor: pointer;
   outline: none;
   color: #000;
-  background-color: #ffd7cb;
-  border: none;
 }
 
 .xsBtn:hover, .smBtn:hover, .mdBtn:hover, .lgBtn:hover {

@@ -3,7 +3,7 @@ html {
     scroll-behavior: smooth;
     overflow-y: scroll;
 }
-main { background-color:  $body-background; }
+main { background-color: $body-background; }
 .wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
